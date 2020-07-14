@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    static public PlayerMove instance;
+
+    public string currentMapName;
+
     public float Speed =2;
     Rigidbody2D rigid;
     float h;
@@ -12,7 +16,17 @@ public class PlayerMove : MonoBehaviour
     
     void Awake()
     {
-        rigid = GetComponent<Rigidbody2D>();
+        if (instance == null)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            rigid = GetComponent<Rigidbody2D>();
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+
     }
     void Update()
     {
