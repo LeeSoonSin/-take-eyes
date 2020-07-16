@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
 
     static public PlayerMove instance;
 
-    public Talk_manager manager;
+    public Gamemanager manager;
     public float Speed = 2; // 플레이어 이동 속도
     Rigidbody2D rigid;
     float h;
@@ -29,10 +29,12 @@ public class PlayerMove : MonoBehaviour
         if (instance != null)
         {
             Destroy(this.gameObject);
+            Destroy(this.manager);
         }
         else
         {
             DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(this.manager);
             instance = this;
         }
         rigid = GetComponent<Rigidbody2D>();
@@ -41,13 +43,13 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         //움직임 값
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
+        h = manager.isAction ? 0 : Input.GetAxisRaw("Horizontal");
+        v = manager.isAction ? 0 : Input.GetAxisRaw("Vertical");
         //움직임 버튼 설정
-        bool hDown = Input.GetButtonDown("Horizontal");
-        bool vDown = Input.GetButtonDown("Vertical");
-        bool hUp = Input.GetButtonUp("Horizontal");
-        bool vUp = Input.GetButtonUp("Vertical");
+        bool hDown = manager.isAction ? false : Input.GetButtonDown("Horizontal");
+        bool vDown = manager.isAction ? false : Input.GetButtonDown("Vertical");
+        bool hUp = manager.isAction ? false : Input.GetButtonUp("Horizontal");
+        bool vUp = manager.isAction ? false : Input.GetButtonUp("Vertical");
         //수평 이동 
         if (hDown || vUp)
         {
