@@ -5,10 +5,23 @@ using UnityEngine;
 public class TalkManager : MonoBehaviour
 {
     Dictionary<int, string[]> talkData;
+    static public TalkManager instance;
+
     void Awake()
     {
         talkData = new Dictionary<int, string[]>();
         GernerateData();
+
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+
     }
 
     // Update is called once per frame

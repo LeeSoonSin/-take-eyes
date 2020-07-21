@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
     public AudioClip walkSound_1;
     public AudioSource audioSource;
 
-    void Awake()
+    void Awake()//플레이어 삭제 방지
     {
         if (instance != null)
         {
@@ -99,6 +99,14 @@ public class PlayerMove : MonoBehaviour
         else
         {
             scanObject = null;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag =="Enermy")
+        {
+            Gamemanager.Instance.GameOver();
         }
     }
 }
