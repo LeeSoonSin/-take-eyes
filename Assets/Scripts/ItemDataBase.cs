@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class ItemDataBase : MonoBehaviour
 {
-    public List<Item> itemList = new List<Item>();
-
-    void Start()
+    public static ItemDataBase instance;
+    private void Awake()
     {
-        itemList.Add(new Item(10001, "일기장", "누군가가 적은 일기장이다.", Item.ItemType.Use));
+        instance = this;
     }
-    void Update()
-    {
-
-    }
+    public List<Item> itemDB = new List<Item>();
 }

@@ -20,7 +20,7 @@ public class Gamemanager : MonoBehaviour
 
     void Start()
     {
-        GameLoad();
+        //GameLoad();
         if (instance != null)
         {
             Destroy(this.gameObject);
@@ -109,16 +109,16 @@ public class Gamemanager : MonoBehaviour
         menuSet.SetActive(false);
     }
 
-    public void GameLoad()
-    {
-        if(PlayerPrefs.HasKey("PlayerX"))
-        {
-            return;
-        }
-        float x =PlayerPrefs.GetFloat("PlayerX");
-        float y= PlayerPrefs.GetFloat("PlayerY");
-        player.transform.position = new Vector3(x, y, 0);
-    }
+    //public void GameLoad()
+    //{
+    //    if(PlayerPrefs.HasKey("PlayerX"))
+    //    {
+    //        return;
+    //    }
+    //    float x =PlayerPrefs.GetFloat("PlayerX");
+    //    float y= PlayerPrefs.GetFloat("PlayerY");
+    //    player.transform.position = new Vector3(x, y, 0);
+    //}
     public void GameOver()
     {
         SceneManager.LoadScene("GameOver");

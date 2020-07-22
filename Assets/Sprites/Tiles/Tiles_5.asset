@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: School_A5_8
+  m_Name: Tiles_5
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -7225061437608757587, guid: 5a7d814c9ad9d2a49a90470303ec429e,
+  m_Sprite: {fileID: -6833445872158455971, guid: 5faed09a59e61a94ea3e4479108d5ef4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
