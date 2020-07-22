@@ -7,11 +7,8 @@ using UnityEngine;
 [System.Serializable]
 public class Item
 {
-    public int itemID;
     public string itemName;
-    public string itemDescription;
-    public int itemCount;
-    public Sprite itemIcon;
+    public Sprite itemImage;
     public ItemType itemType;
 
     public enum ItemType

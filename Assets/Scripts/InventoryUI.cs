@@ -6,7 +6,10 @@ public class InventoryUI : MonoBehaviour
 {
     public GameObject inventoryPanel;
     bool activeInventory = false;
+    List<Item> items = new List<Item>();
 
+    public delegate void OnChangeItem();
+    public OnChangeItem onChangeItem;
     void Start()
     {
         inventoryPanel.SetActive(activeInventory);
@@ -17,6 +20,27 @@ public class InventoryUI : MonoBehaviour
         {
             activeInventory = !activeInventory;
             inventoryPanel.SetActive(activeInventory);
+        }
+    }
+    public bool AddItem(Item _item)
+    {
+        items.Add(_item);
+        if(onChangeItem != null)
+        {
+            onChangeItem.Invoke();
+        }    
+        return true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("FieldItem"))
+        {
+            FieldItem fieldItems = collision.GetComponent<FieldItem>();
+            if(AddItem(fieldItems.GetItem()))
+            {
+                fieldItems.DestroyItem();
+            }
         }
     }
 }
