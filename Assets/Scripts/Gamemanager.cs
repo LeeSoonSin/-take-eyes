@@ -20,6 +20,7 @@ public class Gamemanager : MonoBehaviour
 
     void Start()
     {
+        GameLoad();
         if (instance != null)
         {
             Destroy(this.gameObject);

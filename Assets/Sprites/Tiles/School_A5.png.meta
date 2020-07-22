@@ -6,9 +6,6 @@ TextureImporter:
       213: -8208414955083482899
     second: School_A5_0
   - first:
-      213: -8184575539525864372
-    second: School_A5_0
-  - first:
       213: 7833746906557038864
     second: School_A5_1
   - first:
@@ -176,12 +173,6 @@ TextureImporter:
   - first:
       213: 3806417667167299948
     second: School_A5_56
-  - first:
-      213: 4308575622141922731
-    second: School_A5_57
-  - first:
-      213: 1686236686068621912
-    second: School_A5_58
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -281,8 +272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c44b53919eb8a6e80800000000000000
-      internalID: -8184575539525864372
+      spriteID: de8be31a61ad51e80800000000000000
+      internalID: -8208414955083482899
       vertices: []
       indices: 
       edges: []
