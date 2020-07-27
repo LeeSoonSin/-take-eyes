@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class StartPoint : MonoBehaviour
 {
-    public string startpoint;
-    private PlayerMove thePlayer;
+    public string startpoint; //이동되어온 맵 이름 체크
+    private PlayerMove thePlayer; // 캐릭터 객체를 가져옴
+    public int StartNum;
+
     void Start()
     {
         thePlayer = FindObjectOfType<PlayerMove>();
-        if(startpoint == thePlayer.currentMapName)
+        if (startpoint == thePlayer.currentMapName)
         {
-            thePlayer.transform.position = this.transform.position;
+            if (StartNum == thePlayer.MapNum)
+            {
+                thePlayer.transform.position = this.transform.position;
+            }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

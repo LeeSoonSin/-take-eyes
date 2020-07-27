@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TransferMap : MonoBehaviour
 {
-    //이동할 맵의 이름 설정
-    public string transferMapName;
-
+    public string transferMapName;//이동할 맵 이름
+    public int MapNumber;//이동할 맵의 번호
     private PlayerMove thePlayer;
 
     void Start()
@@ -15,11 +14,12 @@ public class TransferMap : MonoBehaviour
         thePlayer = FindObjectOfType<PlayerMove>();
     }
 
-   private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Player")
+        if (collision.gameObject.name == "Player")//콜라이더 에 닿은게 플레이어 라면...
         {
             thePlayer.currentMapName = transferMapName;
+            thePlayer.MapNum = MapNumber;
             SceneManager.LoadScene(transferMapName);
         }
     }

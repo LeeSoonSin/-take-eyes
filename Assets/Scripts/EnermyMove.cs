@@ -5,29 +5,32 @@ using UnityEngine;
 public class EnermyMove : MonoBehaviour
 {
     Rigidbody2D rigid;
-    public int nextMove;
-
-    void Awake()
+    public float speed=2;
+    bool isLeft = true;
+    private void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
-        Invoke("Think", 3);
+
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+    }
 
-        Vector2 frontVec = new Vector2(rigid.position.x + nextMove, rigid.position.y);
-        Debug.DrawRay(frontVec, Vector3.down, new Color(0,1,0));
-        RaycastHit2D rayHit = Physics2D.Raycast(frontVec, Vector3.down, 1, LayerMask.GetMask("Floor"));
-        if(rayHit.collider == null)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Border")
         {
-
+            if (isLeft)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                isLeft = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                isLeft = true;
+            }
         }
-    }
-    void Think()
-    {
-        nextMove = Random.Range(-1, 2);
-        Invoke("Think", 3);
     }
 }
