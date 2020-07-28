@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-
-    
+    public static Inventory instance;
+    private DataBase dataBase;
     private InventorySlot[] slots;//인벤토리 슬롯들
     private List<Item> inventoryItemList;//플레이어가 소지한 아이템 리스트
     private List<Item> inventoryTabList; //선택한 탭에 따라 다르게 보여질 아이템 리스트
@@ -37,14 +37,37 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
+        dataBase = FindObjectOfType<DataBase>();
         stopKeyInput = false; 
         inventoryItemList = new List<Item>();
         inventoryTabList = new List<Item>();
         slots = tf.GetComponentsInChildren<InventorySlot>();
+        //itemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));//이거 안됨 ㅠㅠ
     }//완벽(1)
 
     // Update is called once per frame
 
+    public void GetAnItem(int _itemID, int _count = 1)
+    {
+        for(int i=0; i < dataBase.itemList.Count; i++)//데이터베이스 아이템 검색
+        {
+            if(_itemID == dataBase.itemList[i].itemID)//데이터베이스에 아이템 발견
+            {
+                for(int j=0; j<inventoryItemList.Count; j++)//소지품에 같은 아이템이 있는지 검색
+                {
+                    if(inventoryItemList[j].itemID == _itemID)//소지품에 같은 아이템이 있다. ->개수만 증감시켜줌
+                    {
+                        inventoryItemList[j].itemCount += _count;
+                        return;
+                    }
+                }
+                inventoryItemList.Add(dataBase.itemList[i]);//소지품에 해당아이템 추가
+                return;
+            }
+        }
+        Debug.LogError("데이터베이스에 해당 ID값을 가진 아이템이 존재하지 않습니다.");//데이터베이스에 itemID없음
+    }
     public void RemoveSlot()
     {
         for (int i = 0; i < slots.Length; i++)
