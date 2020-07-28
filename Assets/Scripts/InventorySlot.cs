@@ -10,14 +10,14 @@ public class InventorySlot : MonoBehaviour
     public Text itemName_Text;
     public Text itemCount_Text;
     public GameObject selected_Item; //반짝이는 효과
-    
+
     public void Additem(Item _item)//아이템 추가하는 곳
     {
         itemName_Text.text = _item.itemName;
         icon.sprite = _item.itemIcon;
-        if(Item.ItemType.Use == _item.itemType)//소모품일 경우 아이템 수량 표시
+        if (Item.ItemType.Use == _item.itemType)//소모품일 경우 아이템 수량 표시
         {
-            if(_item.itemCount > 0)
+            if (_item.itemCount > 0)
             {
                 itemCount_Text.text = "x " + _item.itemCount.ToString();
             }

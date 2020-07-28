@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
     public string[] tabDescription;// 탭 부연 설명
 
     public Transform tf; //slot 부모객체 (Grid Slot)
+
     public GameObject go; //인벤토리 활성화/ 비활성화
     public GameObject[] selectedTabImages;
 
@@ -37,30 +38,31 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         stopKeyInput = false; 
-        inventoryTabList = new List<Item>();
+        inventoryItemList = new List<Item>();
         inventoryTabList = new List<Item>();
         slots = tf.GetComponentsInChildren<InventorySlot>();
-    }
+    }//완벽(1)
 
     // Update is called once per frame
-   
-    
+
+    public void RemoveSlot()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].RemoveItem();//이 작업은 아이템창에 빈 아이템이 안보이게 하는 역할이다.
+            slots[i].gameObject.SetActive(false);
+        }
+    }//인벤토리 슬롯 초기화 완벽(2)
+
     public void ShowTab()
     {
         RemoveSlot();
         SelectedTab();
     } //탭 활성화
-    public void RemoveSlot()
-    {
-        for(int i = 0; i<slots.Length; i++)
-        {
-            slots[i].RemoveItem();//이 작업은 아이템창에 빈 아이템이 안보이게 하는 역할이다.
-            slots[i].gameObject.SetActive(false);
-        }
-    }//인벤토리 슬롯 초기화
+
     public void SelectedTab()
     {
-        //StopAllCoroutines();  이거 아닌데
+        StopAllCoroutines(); //이거 
         Color color = selectedTabImages[selectedTab].GetComponent<Image>().color;
         color.a = 0f;
         for(int i=0;i<selectedTabImages.Length; i++)
@@ -69,7 +71,7 @@ public class Inventory : MonoBehaviour
         }
         Description_Text.text = tabDescription[selectedTab];//이걸 통해서 소모품 같은것들의 설명이 출력
         StartCoroutine(SelectedTabEffectCoroutine());
-    } //선택된 탭을 제외하고 다른 모든 탭의 컬러 알파값을 0으로 조정.
+    } //선택된 탭을 제외하고 다른 모든 탭의 컬러 알파값을 0으로 조정. 완벽(3)
     IEnumerator SelectedTabEffectCoroutine()
     {
         while(tabActivated)
@@ -89,7 +91,7 @@ public class Inventory : MonoBehaviour
             }
             yield return new WaitForSeconds(0.3f);
         }
-    } //선택된 탭 반짝임 효과
+    } //선택된 탭 반짝임 효과  완벽(3-1)
 
     public void ShowItem()
     {
@@ -108,7 +110,7 @@ public class Inventory : MonoBehaviour
                     }
                 }
                 break;
-            case 1: //소모품의 경우
+            case 1: //장비의 경우
                 for (int i = 0; i < inventoryItemList.Count; i++)
                 {
                     if (Item.ItemType.Equip == inventoryItemList[i].itemType)
@@ -117,7 +119,7 @@ public class Inventory : MonoBehaviour
                     }
                 }
                 break;
-            case 2: //소모품의 경우
+            case 2: //퀘스트의 경우
                 for (int i = 0; i < inventoryItemList.Count; i++)
                 {
                     if (Item.ItemType.Quest == inventoryItemList[i].itemType)
@@ -126,7 +128,7 @@ public class Inventory : MonoBehaviour
                     }
                 }
                 break;
-            case 3: //소모품의 경우
+            case 3: //기타의 경우
                 for (int i = 0; i < inventoryItemList.Count; i++)
                 {
                     if (Item.ItemType.ETC == inventoryItemList[i].itemType)
@@ -141,7 +143,7 @@ public class Inventory : MonoBehaviour
             slots[i].gameObject.SetActive(true);
             slots[i].Additem(inventoryTabList[i]);
         }//인벤토리 탭 리스트의 내용을 인벤토리 슬롯에 추가
-        //selectedItem(); //선택된것만 반짝거릴수 있게
+        SelectedItem(); //선택된것만 반짝거릴수 있게
     }  //아이템 활성화 (InventoryTabList에 조건에 맞는 아이템들만 넣어주고, 인벤토리 슬롯에 출력)
     public void SelectedItem()
     {
@@ -154,7 +156,6 @@ public class Inventory : MonoBehaviour
             {
                 slots[i].selected_Item.GetComponent<Image>().color = color;
             }
-
             Description_Text.text = inventoryTabList[selectedItem].itemDescription;
             StartCoroutine(SelectedItemEffectCoroutine());
         }
@@ -190,7 +191,7 @@ public class Inventory : MonoBehaviour
         if (!stopKeyInput)
         {
             
-            if(Input.GetKeyDown(KeyCode.I))//I키를 누를경우 인벤토리 열림 27분 20초 영상에서 플레이어 멈춤 구현
+            if(Input.GetKeyDown(KeyCode.S))//S키를 누를경우 인벤토리 열림 27분 20초 영상에서 플레이어 멈춤 구현
             {
                 activated = !activated; //true면 false로 바꿔주고 false면 true로 바꿔줌
                 if (activated)
@@ -203,13 +204,12 @@ public class Inventory : MonoBehaviour
                 }
                 else
                 {
-
                     StopAllCoroutines();
                     go.SetActive(false);
                     tabActivated = false;
                     itemActivated = false;
                 }
-            }
+            }//완벽(4)
 
             if (activated)
             {
@@ -226,21 +226,16 @@ public class Inventory : MonoBehaviour
                             selectedTab = 0;
                         }
                         SelectedTab();
-                    }
-                    else if (tabActivated)
+                    }//38분 30초 
+                    if (Input.GetKeyDown(KeyCode.LeftArrow))
                     {
-                        if (Input.GetKeyDown(KeyCode.LeftArrow))
+                        if (selectedTab >0)
                         {
-                            if (selectedTab > 0)
-                            {
-                                selectedTab--;
-                            }
-                            else
-                            {
-                                selectedTab = selectedTabImages.Length - 1;
-                            }
-                            SelectedTab();
+                            selectedTab--;
                         }
+                        else
+                            selectedTab = selectedTabImages.Length - 1;
+                        SelectedTab();
                     }
                     else if (Input.GetKeyDown(KeyCode.Z)) //결정키
                     {
@@ -256,9 +251,9 @@ public class Inventory : MonoBehaviour
                
                 else if(itemActivated)
                 {
-                    if (Input.GetKeyDown(KeyCode.DownArrow))
+                    if (Input.GetKeyDown(KeyCode.DownArrow))//53분
                     {
-                        if (selectedItem < inventoryTabList.Count - 1)
+                        if (selectedItem < inventoryTabList.Count - 2)
                         {
                             selectedItem+=2;
                         }
@@ -268,7 +263,7 @@ public class Inventory : MonoBehaviour
                         }
                         SelectedItem();
                     }
-                    if (Input.GetKeyDown(KeyCode.UpArrow))
+                    else if (Input.GetKeyDown(KeyCode.UpArrow))
                     {
                         if (selectedItem < 1)
                         {
@@ -280,7 +275,7 @@ public class Inventory : MonoBehaviour
                         }
                         SelectedItem();
                     }
-                    if (Input.GetKeyDown(KeyCode.RightArrow))
+                    else if (Input.GetKeyDown(KeyCode.RightArrow))
                     {
                         if(selectedItem < inventoryTabList.Count -1)
                         {
@@ -317,7 +312,7 @@ public class Inventory : MonoBehaviour
                         }
                         else//비프음 출력
                         {
-                            Debug.Log("Hello Unity!");
+                            Debug.Log("음악이 업서요 ㅜㅜ");
                         }
                         
                     }
