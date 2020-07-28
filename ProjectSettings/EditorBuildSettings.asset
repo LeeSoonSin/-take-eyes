@@ -32,4 +32,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2F/2F_Hall.unity
     guid: 0c74fd2e10b0da1419394a9fb4b87871
+  - enabled: 1
+    path: Assets/Scenes/3F/Classroom_3.unity
+    guid: 7601f6ca6518f0b42a64be758f1060d9
+  - enabled: 1
+    path: Assets/Scenes/3F/Classroom_4.unity
+    guid: c5d1ba91b1a4a9b4fb7511a98372818a
+  - enabled: 1
+    path: Assets/Scenes/3F/restroom_3.unity
+    guid: bf07acbc5ee5ebe4e8e8ece908c3ded3
+  - enabled: 1
+    path: Assets/Scenes/3F/restroom_4.unity
+    guid: 7506a9ef70d7b924b903bb2f773b621f
+  - enabled: 1
+    path: Assets/Scenes/3F/Staffroom_2.unity
+    guid: e566ac7164f2a7144be016b255f005f9
   m_configObjects: {}
