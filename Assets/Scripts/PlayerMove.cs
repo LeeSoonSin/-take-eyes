@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public string currentMapName; //transferMap 스크립트에 있는 transperMapName 변수의 값을 저장.
-
+    public int MapNum;///transferMap 스크립트에 있는 맵의 변수 값 저장.
     static public PlayerMove instance;
 
     public Gamemanager manager;
