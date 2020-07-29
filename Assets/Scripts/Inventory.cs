@@ -43,7 +43,8 @@ public class Inventory : MonoBehaviour
         inventoryItemList = new List<Item>();
         inventoryTabList = new List<Item>();
         slots = tf.GetComponentsInChildren<InventorySlot>();
-        //itemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));//이거 안됨 ㅠㅠ
+        //여기에 시작하자마자 쓸 수 있는 아이템을 추가할 수 있다.
+        // ex) inventoryItemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
     }//완벽(1)
 
     // Update is called once per frame
@@ -58,7 +59,15 @@ public class Inventory : MonoBehaviour
                 {
                     if(inventoryItemList[j].itemID == _itemID)//소지품에 같은 아이템이 있다. ->개수만 증감시켜줌
                     {
-                        inventoryItemList[j].itemCount += _count;
+                        if(inventoryItemList[i].itemType == Item.ItemType.Use)
+                        {
+                            inventoryItemList[j].itemCount += _count;
+                            return;
+                        }
+                        else
+                        {
+                            inventoryItemList.Add(dataBase.itemList[i]);
+                        }
                         return;
                     }
                 }
