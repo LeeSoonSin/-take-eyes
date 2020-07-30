@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public string currentMapName; //transferMap 스크립트에 있는 transperMapName 변수의 값을 저장.
     public int MapNum;///transferMap 스크립트에 있는 맵의 변수 값 저장.
     static public PlayerMove instance;
+    public bool notMove = false;
 
     public Gamemanager manager;
     public float Speed = 2; // 플레이어 이동 속도
@@ -54,6 +55,18 @@ public class PlayerMove : MonoBehaviour
         bool vDown = manager.isAction ? false : Input.GetButtonDown("Vertical");
         bool hUp = manager.isAction ? false : Input.GetButtonUp("Horizontal");
         bool vUp = manager.isAction ? false : Input.GetButtonUp("Vertical");
+
+        if (!notMove)
+        {
+            if (hDown || vUp)
+            {
+                isHorizonMove = true;
+            }
+            else if (vDown || hUp)
+            {
+                isHorizonMove = false;
+            }
+        }
         //수평 이동 
         if (hDown || vUp)
         {

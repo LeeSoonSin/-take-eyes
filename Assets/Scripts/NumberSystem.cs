@@ -36,7 +36,7 @@ public class NumberSystem : MonoBehaviour
         correctFlag = false;
 
         string temp = correctNumber.ToString(); // 문자열로 변경 count에 넣기 위함
-        for (int i = 0; i < temp.Length; i++)
+        for (int i = 0; i < temp.Length; i++)//정해진 갯수 만큼의 숫자 패널을 생성
         {
             count = i;
             panel[i].SetActive(true);
@@ -46,6 +46,7 @@ public class NumberSystem : MonoBehaviour
             superObject.transform.position.x + (Text_line * count),
             superObject.transform.position.y,
             superObject.transform.position.z);
+        //숫자 패널들 사이의 간격 조절
 
         selectedTextBox = 0;
         result = 0;
@@ -136,7 +137,7 @@ public class NumberSystem : MonoBehaviour
                 }
                 SetColor();
             }
-            else if (Input.GetKeyDown(KeyCode.Z))//결정키
+            else if (Input.GetButtonDown("Jump"))//결정키
             {
                 keyInput = false;
                 StartCoroutine(OXCoroutine());
@@ -150,7 +151,7 @@ public class NumberSystem : MonoBehaviour
         }
     }
 
-    IEnumerator OXCoroutine()
+    IEnumerator OXCoroutine()//정답 판별
     {
         Color color = Number_Text[0].color;
         color.a = 1f;
@@ -164,7 +165,6 @@ public class NumberSystem : MonoBehaviour
 
         result = int.Parse(tempNumber);
 
-        //정답 판별
         if (result == correctNumber)
         {
             correctFlag = true;
@@ -175,7 +175,7 @@ public class NumberSystem : MonoBehaviour
         }
         StartCoroutine(ExitCoroutine());
     }
-    IEnumerator ExitCoroutine()
+    IEnumerator ExitCoroutine()//종료
     {
         result = 0;
         tempNumber = "";

@@ -13,6 +13,8 @@ public class Gamemanager : MonoBehaviour
     public Text talkText;
     public GameObject scanObject;
     public GameObject menuSet;
+    public GameObject Inventory;
+    public GameObject Number_System;
     public bool isAction;
     public int talkIndex;
     public GameObject player;
@@ -23,15 +25,19 @@ public class Gamemanager : MonoBehaviour
         //GameLoad();
         if (instance != null)
         {
+            Destroy(this.talkPanel);
             Destroy(this.gameObject);
             Destroy(this.talkText);
+            Destroy(this.Inventory);
+
 
         }
         else
         {
             DontDestroyOnLoad(this.gameObject);
             DontDestroyOnLoad(this.talkText);
-
+            DontDestroyOnLoad(this.Inventory);
+            DontDestroyOnLoad(this.talkPanel);
 
             instance = this;
         }
@@ -50,7 +56,10 @@ public class Gamemanager : MonoBehaviour
             }
         }
     }
-
+    public void StopAction()
+    {
+        isAction = true;
+    }
     public void Action(GameObject scanObj)
     {
             isAction = true;

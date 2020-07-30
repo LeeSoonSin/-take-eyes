@@ -9,7 +9,7 @@ public class ItemPickup : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(Input.GetKeyDown(KeyCode.Z))
+        if(Input.GetButtonDown("Jump"))
         {
             Inventory.instance.GetAnItem(itemID, _count);
             Destroy(this.gameObject);

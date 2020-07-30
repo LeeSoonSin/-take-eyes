@@ -81,7 +81,7 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            slots[i].RemoveItem();//이 작업은 아이템창에 빈 아이템이 안보이게 하는 역할이다.
+            slots[i].RemoveItem();// 아이템창에 빈 아이템이 안보이게 하는 역할이다.
             slots[i].gameObject.SetActive(false);
         }
     }//인벤토리 슬롯 초기화 완벽(2)
@@ -223,9 +223,9 @@ public class Inventory : MonoBehaviour
         if (!stopKeyInput)
         {
             
-            if(Input.GetKeyDown(KeyCode.S))//S키를 누를경우 인벤토리 열림 27분 20초 영상에서 플레이어 멈춤 구현
+            if(Input.GetKeyDown(KeyCode.S))//S키를 누를경우 
             {
-                activated = !activated; //true면 false로 바꿔주고 false면 true로 바꿔줌
+                activated = !activated; //true면 false로 false면 true로 바꿔줌
                 if (activated)
                 {
                     go.SetActive(true);
@@ -241,7 +241,7 @@ public class Inventory : MonoBehaviour
                     tabActivated = false;
                     itemActivated = false;
                 }
-            }//완벽(4)
+            }
 
             if (activated)
             {
@@ -360,7 +360,7 @@ public class Inventory : MonoBehaviour
                 if (Input.GetKeyUp(KeyCode.Z))
                 {
                     preventExec = false;
-                    //ShowItem(); 오류나면 이거 주석 풀어보삼
+                    //ShowItem(); 오류가 난다면 주석을 풀어서 확인
                 }
             }
         }

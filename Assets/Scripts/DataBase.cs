@@ -12,7 +12,7 @@ public class DataBase : MonoBehaviour
 
     public List<Item> itemList = new List<Item>();
     
-    void Start()//필요한 아이템이 있을때마다 여기에 추가하자!
+    void Start()//아이템을 여기에 추가
     {
         itemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
     }

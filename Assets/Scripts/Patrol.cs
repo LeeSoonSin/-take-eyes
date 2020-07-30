@@ -5,10 +5,10 @@ using UnityEngine;
 public class Patrol : MonoBehaviour
 {
     public float speed;
-    private int randomSpot;
+    private int randomSpot;//랜덤값
     private float waitTime;
-    public float startWaitTime;
-    public Transform[] moveSpots;
+    public float startWaitTime;//몬스터가 대기하는 시간
+    public Transform[] moveSpots;//몬스터가 움직일 곳
     void Start()
     {
         randomSpot = Random.Range(0, moveSpots.Length);   
@@ -28,7 +28,7 @@ public class Patrol : MonoBehaviour
             }
             else
             {
-                waitTime -= Time.deltaTime;
+                waitTime -= Time.deltaTime;//대기 시간이 줄어든다.
             }
         }
     }
