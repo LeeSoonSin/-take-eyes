@@ -72,6 +72,7 @@ public class Inventory : MonoBehaviour
                     }
                 }
                 inventoryItemList.Add(dataBase.itemList[i]);//소지품에 해당아이템 추가
+                inventoryItemList[inventoryItemList.Count - 1].itemCount = _count;
                 return;
             }
         }
