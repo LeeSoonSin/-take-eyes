@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+
+    private OkOrCancel theOOC;
     public static Inventory instance;
     private DataBase dataBase;
     private InventorySlot[] slots;//인벤토리 슬롯들
@@ -20,6 +22,7 @@ public class Inventory : MonoBehaviour
 
     public GameObject go; //인벤토리 활성화/ 비활성화
     public GameObject[] selectedTabImages;
+    public GameObject go_OOC; //선택지 활성화 비활성화
 
     private int selectedItem; //선택된 아이템.
     private int selectedTab; //선택된 탭.
@@ -39,7 +42,9 @@ public class Inventory : MonoBehaviour
     {
         instance = this;
         dataBase = FindObjectOfType<DataBase>();
-        stopKeyInput = false; 
+        stopKeyInput = false;
+        theOOC = FindObjectOfType<OkOrCancel>();
+
         inventoryItemList = new List<Item>();
         inventoryTabList = new List<Item>();
         slots = tf.GetComponentsInChildren<InventorySlot>();
@@ -337,6 +342,7 @@ public class Inventory : MonoBehaviour
                         if(selectedTab ==0)//소모품
                         {
                             stopKeyInput = true;
+                            StartCoroutine(OOCCoroutine());
                             //물약을 마실거냐? 같은 선택지 호출
                         }
                         else if(selectedTab ==1)
@@ -365,5 +371,31 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator OOCCoroutine()
+    {
+        go_OOC.SetActive(true);
+        theOOC.ShowTwoChoice("사용", "취소");
+        yield return new WaitUntil(() => !theOOC.activated);
+        for(int i=0;i<inventoryItemList.Count; i++)
+        {
+            if(inventoryItemList[i].itemID==inventoryTabList[selectedItem].itemID)
+            {
+                dataBase.UseItem(inventoryItemList[i].itemID);
+                if(inventoryItemList[i].itemCount > 1)
+                {
+                    inventoryItemList[i].itemCount--;
+                }
+                else
+                {
+                    inventoryItemList.RemoveAt(i);
+                }
+                ShowItem();
+                break;
+            }
+        }
+        stopKeyInput = false;
+        go_OOC.SetActive(false);
     }
 }

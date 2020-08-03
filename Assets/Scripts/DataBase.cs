@@ -12,6 +12,19 @@ public class DataBase : MonoBehaviour
 
     public List<Item> itemList = new List<Item>();
     
+    public void UseItem(int _itemID)
+    {
+        switch(_itemID)
+        {
+            case 10001:
+                Debug.Log("문이 열렸습니다.");
+                break;
+            case 10002:
+                Debug.Log("제초제를 사용했습니다.");
+                break;
+
+        }
+    }
     void Start()//아이템을 여기에 추가
     {
         itemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
