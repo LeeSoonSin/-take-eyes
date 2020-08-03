@@ -367,7 +367,7 @@ public class Inventory : MonoBehaviour
                 if (Input.GetKeyUp(KeyCode.Z))
                 {
                     preventExec = false;
-                    //ShowItem(); 오류가 난다면 주석을 풀어서 확인
+                    ShowItem();
                 }
             }
         }
@@ -376,23 +376,26 @@ public class Inventory : MonoBehaviour
     IEnumerator OOCCoroutine()
     {
         go_OOC.SetActive(true);
-        theOOC.ShowTwoChoice("사용", "취소");
+        theOOC.ShowTwoChoice("사용한다", "취소한다");
         yield return new WaitUntil(() => !theOOC.activated);
-        for(int i=0;i<inventoryItemList.Count; i++)
+        if (theOOC.GetResult())
         {
-            if(inventoryItemList[i].itemID==inventoryTabList[selectedItem].itemID)
+            for (int i = 0; i < inventoryItemList.Count; i++)
             {
-                dataBase.UseItem(inventoryItemList[i].itemID);
-                if(inventoryItemList[i].itemCount > 1)
+                if (inventoryItemList[i].itemID == inventoryTabList[selectedItem].itemID)
                 {
-                    inventoryItemList[i].itemCount--;
+                    dataBase.UseItem(inventoryItemList[i].itemID);
+                    if (inventoryItemList[i].itemCount > 1)
+                    {
+                        inventoryItemList[i].itemCount--;
+                    }
+                    else
+                    {
+                        inventoryItemList.RemoveAt(i);
+                    }
+                    ShowItem();
+                    break;
                 }
-                else
-                {
-                    inventoryItemList.RemoveAt(i);
-                }
-                ShowItem();
-                break;
             }
         }
         stopKeyInput = false;

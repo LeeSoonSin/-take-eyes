@@ -14,7 +14,7 @@ public class OkOrCancel : MonoBehaviour //4분 50초
 
     public bool activated;
     private bool keyInput;
-    private bool result = true;
+    private bool result = true; //소비했는데 선택하겠냐 true 아니다 false
 
 
 
@@ -46,7 +46,7 @@ public class OkOrCancel : MonoBehaviour //4분 50초
         activated = true;
         result = true;
         up_Text.text = _upText;
-        down_Text.text = _downText; //이름...?
+        down_Text.text = _downText; 
 
         up_Panel.gameObject.SetActive(false);
         dowm_Panel.gameObject.SetActive(true);
