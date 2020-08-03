@@ -15,6 +15,7 @@ public class NumberSystem : MonoBehaviour
     private string tempNumber;
 
     public GameObject superObject; // 
+    private Gamemanager manager;
     public GameObject[] panel;
     public Text[] Number_Text;
 
@@ -27,10 +28,11 @@ public class NumberSystem : MonoBehaviour
 
     private void Start()
     {
-
+        manager = FindObjectOfType<Gamemanager>();
     }
     public void ShowNumber(int _correctNumber)
     {
+        manager.StopAction();
         correctNumber = _correctNumber;
         activated = true;
         correctFlag = false;
@@ -193,5 +195,6 @@ public class NumberSystem : MonoBehaviour
             superObject.transform.position.z);
 
         activated = false;
+        manager.StartAction();
     }
 }

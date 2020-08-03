@@ -56,6 +56,11 @@ public class Gamemanager : MonoBehaviour
             }
         }
     }
+
+    public void StartAction()
+    {
+        isAction = false;
+    }
     public void StopAction()
     {
         isAction = true;

@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     private OkOrCancel theOOC;
     public static Inventory instance;
     private DataBase dataBase;
+    private Gamemanager manager;
     private InventorySlot[] slots;//인벤토리 슬롯들
     private List<Item> inventoryItemList;//플레이어가 소지한 아이템 리스트
     private List<Item> inventoryTabList; //선택한 탭에 따라 다르게 보여질 아이템 리스트
@@ -42,6 +43,7 @@ public class Inventory : MonoBehaviour
     {
         instance = this;
         dataBase = FindObjectOfType<DataBase>();
+        manager = FindObjectOfType<Gamemanager>();
         stopKeyInput = false;
         theOOC = FindObjectOfType<OkOrCancel>();
 
@@ -234,6 +236,7 @@ public class Inventory : MonoBehaviour
                 activated = !activated; //true면 false로 false면 true로 바꿔줌
                 if (activated)
                 {
+                    manager.StopAction();
                     go.SetActive(true);
                     selectedTab = 0;
                     tabActivated = true;
@@ -242,6 +245,7 @@ public class Inventory : MonoBehaviour
                 }
                 else
                 {
+                    manager.StartAction();
                     StopAllCoroutines();
                     go.SetActive(false);
                     tabActivated = false;
@@ -275,7 +279,7 @@ public class Inventory : MonoBehaviour
                             selectedTab = selectedTabImages.Length - 1;
                         SelectedTab();
                     }
-                    else if (Input.GetKeyDown(KeyCode.Z)) //결정키
+                    else if (Input.GetButtonDown("Jump")) //결정키
                     {
                         Color color = selectedTabImages[selectedTab].GetComponent<Image>().color;
                         color.a = 0.25f;
