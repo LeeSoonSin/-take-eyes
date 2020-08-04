@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cf7b05a7e1b7d41bbf130de1066575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startpoint: 2F_Hall
+  startpoint: Com
   StartNum: 7
 --- !u!61 &71872754
 BoxCollider2D:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
+  transferMapName: 1F_Hall
   MapNumber: 7
 --- !u!61 &96314130
 BoxCollider2D:
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
+  transferMapName: Com
   MapNumber: 7
 --- !u!61 &132078028
 BoxCollider2D:
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cf7b05a7e1b7d41bbf130de1066575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startpoint: 2F_Hall
+  startpoint: 1F_Hall
   StartNum: 7
 --- !u!61 &221852082
 BoxCollider2D:
@@ -499,8 +499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: Staffroom
+  MapNumber: 4
 --- !u!61 &304542422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 1
 --- !u!61 &577033882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -859,7 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
+  transferMapName: Com
   MapNumber: 7
 --- !u!61 &646716565
 BoxCollider2D:
@@ -6266,7 +6266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 5
 --- !u!61 &752907358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6338,7 +6338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 4
 --- !u!61 &808949090
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6449,7 +6449,7 @@ GameObject:
   - component: {fileID: 874942900}
   - component: {fileID: 874942899}
   m_Layer: 0
-  m_Name: Giga_Trans (2)
+  m_Name: Giga_Trans (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6467,8 +6467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: Giga
+  MapNumber: 0
 --- !u!61 &874942900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6521,7 +6521,7 @@ GameObject:
   - component: {fileID: 907111245}
   - component: {fileID: 907111244}
   m_Layer: 0
-  m_Name: Giga_Start (2)
+  m_Name: Giga_Start (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6540,7 +6540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 0
 --- !u!61 &907111245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6593,7 +6593,7 @@ GameObject:
   - component: {fileID: 908257132}
   - component: {fileID: 908257131}
   m_Layer: 0
-  m_Name: 2F_Trans (9)
+  m_Name: 2F_Trans (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6755,8 +6755,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: Food
+  MapNumber: 1
 --- !u!61 &1161417589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6841,7 +6841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cf7b05a7e1b7d41bbf130de1066575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startpoint: 2F_Hall
+  startpoint: Com
   StartNum: 7
 --- !u!61 &1198974048
 BoxCollider2D:
@@ -6913,8 +6913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: SCP
+  MapNumber: 6
 --- !u!61 &1224648736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6985,8 +6985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: Staffroom
+  MapNumber: 3
 --- !u!61 &1382277963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7689,7 +7689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 6
 --- !u!61 &1435541065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7728,7 +7728,7 @@ GameObject:
   - component: {fileID: 1692484871}
   - component: {fileID: 1692484870}
   m_Layer: 0
-  m_Name: 2F_Start (9)
+  m_Name: 2F_Start (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11818,8 +11818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: Giga
+  MapNumber: 2
 --- !u!61 &1959598558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11891,7 +11891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 3
 --- !u!61 &2081610058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11962,8 +11962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: SCP
+  MapNumber: 5
 --- !u!61 &2144465746
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12002,7 +12002,7 @@ GameObject:
   - component: {fileID: 2145326450}
   - component: {fileID: 2145326449}
   m_Layer: 0
-  m_Name: Giga_Start (4)
+  m_Name: Giga_Start (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12035,7 +12035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 2
 --- !u!61 &2145326450
 BoxCollider2D:
   m_ObjectHideFlags: 0
