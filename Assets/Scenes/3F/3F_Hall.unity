@@ -458,7 +458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80910122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3200002, y: -1.2800001, z: -0.1}
+  m_LocalPosition: {x: 32.31, y: -1.2800001, z: -0.1}
   m_LocalScale: {x: 1, y: 0.9649602, z: 1}
   m_Children:
   - {fileID: 772902925}
@@ -975,7 +975,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3432,7 +3432,7 @@ GameObject:
   - component: {fileID: 772902927}
   - component: {fileID: 772902926}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13579,6 +13579,7 @@ GameObject:
   - component: {fileID: 1738031484}
   - component: {fileID: 1738031483}
   - component: {fileID: 1738031482}
+  - component: {fileID: 1738031485}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -13644,6 +13645,23 @@ RectTransform:
   m_AnchoredPosition: {x: 233.5, y: 8.9}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1738031485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738031481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa7cf350939d1a4fae3a3c31e59c5e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  up_Panel: {fileID: 622573386}
+  dowm_Panel: {fileID: 244814276}
+  up_Text: {fileID: 461157941}
+  down_Text: {fileID: 981319778}
+  activated: 0
 --- !u!114 &1744441723 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3830810718359696950, guid: cbf150097971f5d4cb07936ce24f321c,
