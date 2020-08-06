@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cf7b05a7e1b7d41bbf130de1066575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startpoint: 1F_Hall
+  startpoint: 2F_Hall
   StartNum: 10
 --- !u!61 &221852082
 BoxCollider2D:

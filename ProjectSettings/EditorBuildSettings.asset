@@ -68,4 +68,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2F/SCP.unity
     guid: e2fd74984aaff0a4b8905ca07f1d62ca
+  - enabled: 1
+    path: Assets/Scenes/1F/1F_Hall.unity
+    guid: 5f3685012a555914484326d0f93f8786
+  - enabled: 1
+    path: Assets/Scenes/1F/1F_restroom_1.unity
+    guid: 7d10cbdc0def29945bc8c2b7809f7263
+  - enabled: 1
+    path: Assets/Scenes/1F/1F_restroom_2.unity
+    guid: b23fbd046c99ede4685780cc87f25ebb
+  - enabled: 1
+    path: Assets/Scenes/1F/Book.unity
+    guid: 04b729b0754e0d8469ce911be6d6b811
+  - enabled: 1
+    path: Assets/Scenes/1F/HanJunroom.unity
+    guid: bf1ed8c0103c4144ea7e49729355f80b
+  - enabled: 1
+    path: Assets/Scenes/1F/TalkShow.unity
+    guid: ffbd08d2f6f2b094bbd72a7bc56e208b
   m_configObjects: {}
