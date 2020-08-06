@@ -151,7 +151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 655371707}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &71872753
 MonoBehaviour:
@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cf7b05a7e1b7d41bbf130de1066575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startpoint: Com
-  StartNum: 7
+  startpoint: 2F_Hall
+  StartNum: 8
 --- !u!61 &71872754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: 1F_Hall
-  MapNumber: 7
+  MapNumber: 10
 --- !u!61 &96314130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 655371707}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &132078027
 MonoBehaviour:
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Com
-  MapNumber: 7
+  MapNumber: 8
 --- !u!61 &132078028
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 1F_Hall
-  StartNum: 7
+  StartNum: 10
 --- !u!61 &221852082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: Staffroom
+  transferMapName: 2F_Staffroom
   MapNumber: 4
 --- !u!61 &304542422
 BoxCollider2D:
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 13
 --- !u!61 &487264626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -643,8 +643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: 2F_restroom_2
+  MapNumber: 12
 --- !u!61 &489124951
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 1
+  StartNum: 0
 --- !u!61 &577033882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Com
-  MapNumber: 7
+  MapNumber: 9
 --- !u!61 &646716565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6206,15 +6206,15 @@ Transform:
   - {fileID: 1435541063}
   - {fileID: 1692484869}
   - {fileID: 908257130}
-  - {fileID: 132078026}
   - {fileID: 71872752}
+  - {fileID: 132078026}
   - {fileID: 1198974046}
   - {fileID: 646716563}
   - {fileID: 96314128}
   - {fileID: 221852080}
   - {fileID: 828712524}
-  - {fileID: 1770376148}
   - {fileID: 1014997759}
+  - {fileID: 1770376148}
   - {fileID: 489124949}
   - {fileID: 1956110982}
   - {fileID: 487264624}
@@ -6247,7 +6247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752907355}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.62, y: 11.89, z: 0}
+  m_LocalPosition: {x: 57.62, y: 24.869999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 655371707}
@@ -6410,7 +6410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 11
 --- !u!61 &828712526
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6468,7 +6468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Giga
-  MapNumber: 0
+  MapNumber: 1
 --- !u!61 &874942900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6540,7 +6540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 0
+  StartNum: 1
 --- !u!61 &907111245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6626,7 +6626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: 3F_Hall
-  MapNumber: 7
+  MapNumber: 99
 --- !u!61 &908257132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6683,7 +6683,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 655371707}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1014997760
 MonoBehaviour:
@@ -6697,8 +6697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: 2F_restroom_1
+  MapNumber: 11
 --- !u!61 &1014997761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6756,7 +6756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: Food
-  MapNumber: 1
+  MapNumber: 0
 --- !u!61 &1161417589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6841,8 +6841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cf7b05a7e1b7d41bbf130de1066575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startpoint: Com
-  StartNum: 7
+  startpoint: 2F_Hall
+  StartNum: 9
 --- !u!61 &1198974048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6895,7 +6895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224648733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58.91, y: 25.07, z: 0}
+  m_LocalPosition: {x: 58.91, y: 12.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 655371707}
@@ -6985,7 +6985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: Staffroom
+  transferMapName: 2F_Staffroom
   MapNumber: 3
 --- !u!61 &1382277963
 BoxCollider2D:
@@ -7670,7 +7670,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435541062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.62, y: 24.92, z: 0}
+  m_LocalPosition: {x: 57.62, y: 12.009998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 655371707}
@@ -7761,7 +7761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 99
 --- !u!61 &1692484871
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7818,7 +7818,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 655371707}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1770376149
 MonoBehaviour:
@@ -7833,7 +7833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: 2F_Hall
-  StartNum: 7
+  StartNum: 12
 --- !u!61 &1770376150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11746,8 +11746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b32496521288e044a59f1700b0fdcb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transferMapName: 3F_Hall
-  MapNumber: 7
+  transferMapName: 1F_Hall
+  MapNumber: 13
 --- !u!61 &1956110984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11944,7 +11944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144465743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58.91, y: 12.07, z: 0}
+  m_LocalPosition: {x: 58.91, y: 25.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 655371707}

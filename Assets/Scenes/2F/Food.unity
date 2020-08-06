@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: 2F_Hall
-  MapNumber: 1
+  MapNumber: 0
 --- !u!61 &963096262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1300,7 +1300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: Food
-  StartNum: 1
+  StartNum: 0
 --- !u!61 &1263646002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7651,7 +7651,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497688540}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

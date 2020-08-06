@@ -47,4 +47,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3F/Staffroom_2.unity
     guid: e566ac7164f2a7144be016b255f005f9
+  - enabled: 1
+    path: Assets/Scenes/2F/2F_restroom_1.unity
+    guid: 99546c21a2b03514ea1ebf5b37c97bcb
+  - enabled: 1
+    path: Assets/Scenes/2F/2F_restroom_2.unity
+    guid: d8aa0c6d3b91ffe43a9a36d6412b23c8
+  - enabled: 1
+    path: Assets/Scenes/2F/2F_Staffroom.unity
+    guid: 17f42b20aff963b4a89a461e30bdc537
+  - enabled: 1
+    path: Assets/Scenes/2F/Com.unity
+    guid: d0c54da07fb7f564a88311d67ed65d52
+  - enabled: 1
+    path: Assets/Scenes/2F/Food.unity
+    guid: 55fe252f8c02aa34b88b1c7afba5a6a5
+  - enabled: 1
+    path: Assets/Scenes/2F/Giga.unity
+    guid: 48f3c281dfa7ff5489f77bb6232c6d3f
+  - enabled: 1
+    path: Assets/Scenes/2F/SCP.unity
+    guid: e2fd74984aaff0a4b8905ca07f1d62ca
   m_configObjects: {}

@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cf7b05a7e1b7d41bbf130de1066575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startpoint: Staffroom
-  StartNum: 1
+  startpoint: 2F_Staffroom
+  StartNum: 4
 --- !u!61 &49660735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4cf7b05a7e1b7d41bbf130de1066575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startpoint: Staffroom
-  StartNum: 1
+  startpoint: 2F_Staffroom
+  StartNum: 3
 --- !u!61 &171348239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &274327320
 GameObject:
@@ -4743,7 +4743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: 2F_Hall
-  MapNumber: 1
+  MapNumber: 3
 --- !u!61 &1409051918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4782,7 +4782,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1575338669
 GameObject:
@@ -4815,7 +4815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferMapName: 2F_Hall
-  MapNumber: 1
+  MapNumber: 4
 --- !u!61 &1575338671
 BoxCollider2D:
   m_ObjectHideFlags: 0
