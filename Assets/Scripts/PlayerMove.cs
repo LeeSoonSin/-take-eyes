@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour
     float v;
     bool isHorizonMove;
     GameObject scanObject;
-    Vector3 dirVec;
+    public Vector3 dirVec;
 
 
     public AudioClip walkSound_1;
