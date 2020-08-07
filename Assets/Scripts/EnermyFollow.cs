@@ -10,7 +10,7 @@ public class EnermyFollow : MonoBehaviour
     private Transform target;
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Players").GetComponent<Transform>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     void Update()

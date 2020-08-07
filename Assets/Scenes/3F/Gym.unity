@@ -226,12 +226,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  stoppingDistance: 6
-  retratDistance: 4
-  startCool: 3
+  stoppingDistance: 5
+  retratDistance: 2
+  startCool: 2
   projectile: {fileID: 6164726703896453165, guid: e2f7ff86b6cfa984a9a8073a09194ec6,
     type: 3}
-  player: {fileID: 584334389}
+  player: {fileID: 0}
 --- !u!212 &44035695
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2413,7 +2413,7 @@ GameObject:
   - component: {fileID: 584334382}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

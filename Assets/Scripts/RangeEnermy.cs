@@ -17,7 +17,7 @@ public class RangeEnermy : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Players").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         CoolTime = startCool;
     }
 
