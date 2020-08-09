@@ -15,6 +15,7 @@ public class Gamemanager : MonoBehaviour
     public GameObject menuSet;
     public GameObject Inventory;
     public GameObject Number_System;
+    public Image portraitImg; //25분부터 시작.
     public bool isAction;
     public int talkIndex;
     public GameObject player;
@@ -65,28 +66,17 @@ public class Gamemanager : MonoBehaviour
     {
         isAction = true;
     }
-    public void Action(GameObject scanObj) //18분 33초
+    public void Action(GameObject scanObj) //15분 30초
     {
-        if(isAction)
-        {
-            isAction = false;
-        }
-        else
-        {
+        
+
+        //(밑에가 원래 있던거 위에는 영상보고 바꾼거)
             isAction = true;
             scanObject = scanObj;
             ObjData objData = scanObject.GetComponent<ObjData>();
             Talk(objData.id, objData.isNPC);
-        }
-        talkPanel.SetActive(isAction);
-
-        //(밑에가 원래 있던거 위에는 영상보고 바꾼거)
-            /*isAction = true;
-            scanObject = scanObj;
-            ObjData objData = scanObject.GetComponent<ObjData>();
-            Talk(objData.id, objData.isNPC);
         
-        talkPanel.SetActive(isAction);*/
+        talkPanel.SetActive(isAction);
     }
 
     void Talk(int id, bool isNPC)
@@ -101,11 +91,15 @@ public class Gamemanager : MonoBehaviour
         }
         if (isNPC)
         {
-            talkText.text = talkData;
+            talkText.text = talkData.Split(':')[0];
+
+            portraitImg.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
+            portraitImg.color = new Color(1, 1, 1, 1);
         }
         else
         {
             talkText.text = talkData;
+            portraitImg.color = new Color(1, 1, 1, 0); //NPC가 아닌 사물일경우 안보이게 설정하기
         }
 
         isAction = true;
