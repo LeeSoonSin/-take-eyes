@@ -47,6 +47,7 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {
+        //(isAction 할 경우 움직이지 못하게 해놓음.)
         //움직임 값
         h = manager.isAction ? 0 : Input.GetAxisRaw("Horizontal");
         v = manager.isAction ? 0 : Input.GetAxisRaw("Vertical");

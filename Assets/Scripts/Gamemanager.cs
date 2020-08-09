@@ -65,14 +65,28 @@ public class Gamemanager : MonoBehaviour
     {
         isAction = true;
     }
-    public void Action(GameObject scanObj)
+    public void Action(GameObject scanObj) //18분 33초
     {
+        if(isAction)
+        {
+            isAction = false;
+        }
+        else
+        {
             isAction = true;
             scanObject = scanObj;
             ObjData objData = scanObject.GetComponent<ObjData>();
             Talk(objData.id, objData.isNPC);
-        
+        }
         talkPanel.SetActive(isAction);
+
+        //(밑에가 원래 있던거 위에는 영상보고 바꾼거)
+            /*isAction = true;
+            scanObject = scanObj;
+            ObjData objData = scanObject.GetComponent<ObjData>();
+            Talk(objData.id, objData.isNPC);
+        
+        talkPanel.SetActive(isAction);*/
     }
 
     void Talk(int id, bool isNPC)

@@ -27,6 +27,7 @@ public class TalkManager : MonoBehaviour
     // Update is called once per frame
     void GernerateData()
     {
+        talkData.Add(1008, new string[] { "문이 열리지 않아;; 열쇠가 필요할 것 같아" });
         talkData.Add(12, new string[] { "나는 빡빡이다",
             "나는 빡빡이다!!!" });
         talkData.Add(1, new string[] { "오래된 칠판이다. 분필자국이 아직 남아있다." });
