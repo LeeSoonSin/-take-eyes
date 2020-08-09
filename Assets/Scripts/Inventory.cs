@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
 {
 
     private OkOrCancel theOOC;
-    public static Inventory instance;
+    static public Inventory instance;
     private DataBase dataBase;
     private Gamemanager manager;
     private InventorySlot[] slots;//인벤토리 슬롯들
@@ -37,19 +37,28 @@ public class Inventory : MonoBehaviour
     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
 
 
-
+    //싱글턴 
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
-        dataBase = FindObjectOfType<DataBase>();
-        manager = FindObjectOfType<Gamemanager>();
-        stopKeyInput = false;
-        theOOC = FindObjectOfType<OkOrCancel>();
+        if(instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+            dataBase = FindObjectOfType<DataBase>();
+            manager = FindObjectOfType<Gamemanager>();
+            stopKeyInput = false;
+            theOOC = FindObjectOfType<OkOrCancel>();
 
-        inventoryItemList = new List<Item>();
-        inventoryTabList = new List<Item>();
-        slots = tf.GetComponentsInChildren<InventorySlot>();
+            inventoryItemList = new List<Item>();
+            inventoryTabList = new List<Item>();
+            slots = tf.GetComponentsInChildren<InventorySlot>();
+        }
+
         //여기에 시작하자마자 쓸 수 있는 아이템을 추가할 수 있다.
         // ex) inventoryItemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
     }//완벽(1)
@@ -368,7 +377,7 @@ public class Inventory : MonoBehaviour
                     }
                 } //아이템 활성화시 키입력 처리
 
-                if (Input.GetKeyUp(KeyCode.Z))
+                if (Input.GetButtonDown("Jump"))
                 {
                     preventExec = false;
                     ShowItem();
