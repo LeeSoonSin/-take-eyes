@@ -16,9 +16,6 @@ public class DataBase : MonoBehaviour
     {
         switch(_itemID)
         {
-            case 10001:
-                Debug.Log("문이 열렸습니다.");
-                break;
             case 10002:
                 Debug.Log("제초제를 사용했습니다.");
                 break;
