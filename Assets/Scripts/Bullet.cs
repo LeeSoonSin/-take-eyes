@@ -24,17 +24,18 @@ public class Bullet : MonoBehaviour
         {
             DestroyBullet();
         }
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if(other.CompareTag("Players"))
-            {
-                DestroyBullet();
-            }
-        }
-        void DestroyBullet()
-        {
-            Destroy(gameObject);
-        }
+        
 
+    }//벽에 닿았을때 지우기, 몇초뒤 지워지기, 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Players"))
+        {
+            DestroyBullet();
+        }
+    }
+    void DestroyBullet()
+    {
+        Destroy(this.gameObject);
     }
 }

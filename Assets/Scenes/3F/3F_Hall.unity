@@ -308,8 +308,8 @@ GameObject:
   - component: {fileID: 80910125}
   - component: {fileID: 80910129}
   - component: {fileID: 80910124}
-  - component: {fileID: 80910123}
   - component: {fileID: 80910130}
+  - component: {fileID: 80910123}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -327,7 +327,7 @@ Animator:
   m_GameObject: {fileID: 80910122}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f89fe14c75624d48b0a34ecfc7352dd, type: 2}
+  m_Controller: {fileID: 9100000, guid: db45cacc8caa526468aad59de612ab52, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

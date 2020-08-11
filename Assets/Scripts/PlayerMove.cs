@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
     public Gamemanager manager;
     public float Speed = 2; // 플레이어 이동 속도
     Rigidbody2D rigid;
-    SpriteRenderer spriteRenderer;// 애니메이션 부분1
+    SpriteRenderer spriteRenderer;// 애니메이션 부분1 (케이디)
     float h;
     float v;
     bool isHorizonMove;
@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour
     public AudioClip walkSound_1;
     public AudioSource audioSource;
 
-    Animator anim;
+    Animator anim; //케이디
     void Awake()//플레이어 삭제 방지
     {
         if (instance != null)
@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour
             instance = this;
         }
         rigid = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();//애니 2
+        spriteRenderer = GetComponent<SpriteRenderer>();//애니 2(케이디)
         audioSource = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
     }
@@ -59,14 +59,36 @@ public class PlayerMove : MonoBehaviour
 
         if (!notMove)
         {
-            if (hDown || vUp)
+            if (hDown)
             {
                 isHorizonMove = true;
             }
-            else if (vDown || hUp)
+            else if(vDown)
             {
                 isHorizonMove = false;
             }
+            else if (vUp || hUp)
+            {
+                isHorizonMove = h != 0;
+            }
+
+            //Animation
+            if(anim.GetInteger("hAxisRaw") != h)
+            {
+                anim.SetBool("isChange", true);
+                anim.SetInteger("hAxisRaw", (int)h);
+            }
+            else if (anim.GetInteger("vAxisRaw") != v)
+            {
+                anim.SetBool("isChange", true);
+                anim.SetInteger("vAxisRaw", (int)v);
+            }
+            else
+            {
+                anim.SetBool("isChange", false);
+            }
+
+
         }
         //수평 이동 
         if (hDown || vUp)
@@ -99,38 +121,7 @@ public class PlayerMove : MonoBehaviour
         {
             manager.Action(scanObject);
         }
-        //애니 방향전환 x축
-        if (Input.GetButtonDown("Horizontal"))
-        {
-            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
-        }
-        //애니메이션 x축 이동 조건
-        if (rigid.velocity.normalized.x == 0)
-        {
-            anim.SetBool("isWalking", false);
-        }
-        else
-        {
-            anim.SetBool("isWalking", true);
-        }
-        //애니메이션 y축 이동 조건
-        if (rigid.velocity.normalized.y > 0 && rigid.velocity.normalized.x == 0)
-        {
-            anim.SetBool("isUpWalking", true);
-        }
-        else
-        {
-            anim.SetBool("isUpWalking", false);
-        }
-        //애니메이션 y(Down)축 이동 조건
-        if (rigid.velocity.normalized.y < 0 && rigid.velocity.normalized.x == 0)
-        {
-            anim.SetBool("isDownWalking", true);
-        }
-        else 
-        {
-            anim.SetBool("isDownWalking", false);
-        }
+        
     }
     void FixedUpdate()
     {
