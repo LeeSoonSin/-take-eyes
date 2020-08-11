@@ -108,11 +108,11 @@ public class PlayerMove : MonoBehaviour
         {
             dirVec = Vector3.down;
         }
-        else if (hDown && v == -1)
+        else if (hDown && h == -1)
         {
             dirVec = Vector3.left;
         }
-        else if (hDown && v == 1)
+        else if (hDown && h == 1)
         {
             dirVec = Vector3.right;
         }
