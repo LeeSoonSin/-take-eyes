@@ -11,7 +11,23 @@ public class DataBase : MonoBehaviour
     public bool[] switches;
 
     public List<Item> itemList = new List<Item>();
-    
+
+    public static DataBase instance;
+    #region Singleton
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    #endregion Singleton
+
     public void UseItem(int _itemID)
     {
         switch(_itemID)
