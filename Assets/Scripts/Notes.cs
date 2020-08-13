@@ -6,15 +6,20 @@ public class Notes : MonoBehaviour
 {
     public int itemID;
     public GameObject Day_2;
-    bool activeNote = false;
+    //bool activeNote = false;
 
-    private void Update()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump"))
+            {
+                Day_2.SetActive(true);
+            }
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            activeNote = !activeNote;
-            Day_2.SetActive(activeNote);
+            Day_2.SetActive(false);
         }
     }
-
 }

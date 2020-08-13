@@ -35,6 +35,21 @@ public class DataBase : MonoBehaviour
             case 10002:
                 Debug.Log("제초제를 사용했습니다.");
                 break;
+            case 10003:
+                Debug.Log("물이 담긴 페트병을 사용했습니다.");
+                break;
+            case 10004:
+                Debug.Log("페트병을 사용했습니다.");
+                break;
+            case 10008:
+                Debug.Log("대걸레 봉을 사용했습니다.");
+                break;
+            case 10009:
+                Debug.Log("가위를 사용했습니다.");
+                break;
+            case 10010:
+                Debug.Log("이 종이를 사용해도 아무일이 일어나지 않습니다..");
+                break;
 
         }
     }
@@ -49,7 +64,7 @@ public class DataBase : MonoBehaviour
         itemList.Add(new Item(10007, "옥상 열쇠", "옥상 문을 열 열쇠", Item.ItemType.Use));
         itemList.Add(new Item(10008, "대걸레 봉", "매우 길다.", Item.ItemType.Use));
         itemList.Add(new Item(10009, "가위", "식물줄기를 자를 수 있을 것 같다", Item.ItemType.Use));
-        itemList.Add(new Item(10010, "교무실 금고 비밀번호 종이", "종이에는 0254라고 적혀있다.", Item.ItemType.Use));
+        itemList.Add(new Item(10010, "교무실 금고 비밀번호 종이", "종이에는 202020라고 적혀있다.", Item.ItemType.Use));
         
     }
 }
