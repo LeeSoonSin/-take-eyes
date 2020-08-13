@@ -68,7 +68,6 @@ public class Gamemanager : MonoBehaviour
     }
     public void Action(GameObject scanObj) //15분 30초
     {
-        
 
         //(밑에가 원래 있던거 위에는 영상보고 바꾼거)
             isAction = true;

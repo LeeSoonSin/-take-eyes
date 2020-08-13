@@ -13,9 +13,9 @@ public class PlayerMove : MonoBehaviour
     public bool notMove = false;
 
     public Gamemanager manager;
-    public float Speed = 2; // 플레이어 이동 속도
+    public float Speed = 5; // 플레이어 이동 속도
     Rigidbody2D rigid;
-    SpriteRenderer spriteRenderer;// 애니메이션 부분1 (케이디)
+    SpriteRenderer spriteRenderer;// 애니메이션 부분1 (골드메탈)
     float h;
     float v;
     bool isHorizonMove;
@@ -56,7 +56,11 @@ public class PlayerMove : MonoBehaviour
         bool vDown = manager.isAction ? false : Input.GetButtonDown("Vertical");
         bool hUp = manager.isAction ? false : Input.GetButtonUp("Horizontal");
         bool vUp = manager.isAction ? false : Input.GetButtonUp("Vertical");
-
+        //Direction Sprite
+        /*if(Input.GetButtonDown("Horizontal"))
+        {
+            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+        }*/
         if (!notMove)
         {
             if (hDown)
@@ -77,6 +81,10 @@ public class PlayerMove : MonoBehaviour
             {
                 anim.SetBool("isChange", true);
                 anim.SetInteger("hAxisRaw", (int)h);
+                if (hDown)
+                {
+                    spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+                }
             }
             else if (anim.GetInteger("vAxisRaw") != v)
             {
