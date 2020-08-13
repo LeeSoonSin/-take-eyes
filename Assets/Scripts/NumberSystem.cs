@@ -7,10 +7,11 @@ using UnityEngine.UI;
 
 public class NumberSystem : MonoBehaviour
 {
+    public static NumberSystem instance;
     private int count; //배열의 크기 수
     private int selectedTextBox; //선택된 자릿수
-    private int result;// 플레이어가 도출해낸 값
-    private int correctNumber; //비밀번호 정답
+    public int result;// 플레이어가 도출해낸 값
+    public int correctNumber; //비밀번호 정답
 
     private string tempNumber;
 
@@ -23,9 +24,21 @@ public class NumberSystem : MonoBehaviour
 
     public bool activated; //대기
     private bool keyInput; // 키 활성화 여부
-    private bool correctFlag; // 정답확인
+    public bool correctFlag; // 정답확인
     public int Text_line; // 텍스트 간격 설정
 
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+    }
     private void Start()
     {
         manager = FindObjectOfType<Gamemanager>();
@@ -170,6 +183,7 @@ public class NumberSystem : MonoBehaviour
         if (result == correctNumber)
         {
             correctFlag = true;
+            Debug.Log("정답입니다.");
         }
         else
         {
@@ -179,6 +193,7 @@ public class NumberSystem : MonoBehaviour
     }
     IEnumerator ExitCoroutine()//종료
     {
+        Debug.Log("당신이 낸 답" + result + "정답" + correctNumber);
         result = 0;
         tempNumber = "";
         anim.SetBool("Appear", false);
