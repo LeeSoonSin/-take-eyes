@@ -2,19 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroy : MonoBehaviour
+public class DontDestory : MonoBehaviour
 {
-    static public DontDestroy instance;
+    private static DontDestory instance;
+
+    public static DontDestory Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                var obj = FindObjectOfType<DontDestory>();
+                if (obj != null)
+                {
+                    instance = obj;
+                }
+                else
+                {
+                    var newObj = new GameObject().AddComponent<DontDestory>();
+                    instance = newObj;
+                }
+            }
+            return instance;
+        }
+    }
     private void Awake()
     {
-        if (instance != null)
+        var objs = FindObjectsOfType<DontDestory>();
+        if (objs.Length != 1)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
+            return;
         }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
+        DontDestroyOnLoad(gameObject);
     }
 }
