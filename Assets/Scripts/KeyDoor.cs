@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyDoor : MonoBehaviour
 {
+    Dictionary<int, string[]> talkData;
     //[SerializeField] private Key.KeyType keyType;
     public Key.KeyType keyType;
 
