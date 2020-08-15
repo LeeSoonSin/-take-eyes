@@ -81,10 +81,6 @@ public class PlayerMove : MonoBehaviour
             {
                 anim.SetBool("isChange", true);
                 anim.SetInteger("hAxisRaw", (int)h);
-                if (hDown)
-                {
-                    spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
-                }
             }
             else if (anim.GetInteger("vAxisRaw") != v)
             {
