@@ -11,22 +11,50 @@ public class DataBase : MonoBehaviour
     public bool[] switches;
 
     public List<Item> itemList = new List<Item>();
-
+    public GameObject itemPick;
+    public GameObject NumberSystem;
+    public GameObject NumCheck;
     public static DataBase instance;
+
     #region Singleton
-    private void Awake()
+    public static DataBase Instance
     {
-        if (instance == null)
+        get
         {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
+            if (instance == null)
+            {
+                var obj = FindObjectOfType<DataBase>();
+                if (obj != null)
+                {
+                    instance = obj;
+                }
+                else
+                {
+                    var newObj = new GameObject().AddComponent<DataBase>();
+                    instance = newObj;
+                }
+            }
+            return instance;
         }
     }
     #endregion Singleton
+
+    private void Awake()
+    {
+        var objs = FindObjectsOfType<DataBase>();
+        if (objs.Length != 1)
+        {
+            Destroy(gameObject);
+            Destroy(this.itemPick);
+            Destroy(this.NumberSystem);
+            Destroy(this.NumCheck);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this.itemPick);
+        DontDestroyOnLoad(this.NumberSystem);
+        DontDestroyOnLoad(this.NumCheck);
+    }
 
     public void UseItem(int _itemID)
     {
