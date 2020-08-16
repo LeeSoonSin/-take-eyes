@@ -8,11 +8,12 @@ using UnityEngine.UI;
 
 public class Gamemanager : MonoBehaviour
 {
+    private PlayerMove thePlayer;
     public GameObject talkPanel;
     public TalkManager talkManager;
     public Text talkText;
     public GameObject scanObject;
-    public GameObject menuSet;
+    //public GameObject menuSet;
     public GameObject Inventory;
     public GameObject Number_System;
     public Image portraitImg; //25분부터 시작.
@@ -21,6 +22,18 @@ public class Gamemanager : MonoBehaviour
     public GameObject player;
     static public Gamemanager instance;
 
+
+    public void LoadStart()
+    {
+        StartCoroutine(LoadWaitCoroutine());
+    }    
+
+    IEnumerator LoadWaitCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        thePlayer = FindObjectOfType<PlayerMove>();
+
+    }
     void Start()
     {
         //GameLoad();
@@ -45,17 +58,17 @@ public class Gamemanager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
-        {
-            if(menuSet.activeSelf)
-            {
-                menuSet.SetActive(false);
-            }
-            else
-            {
-                menuSet.SetActive(true);
-            }
-        }
+        //if (Input.GetButtonDown("Cancel"))
+        //{
+        //    if(menuSet.activeSelf)
+        //    {
+        //        menuSet.SetActive(false);
+        //    }
+        //    else
+        //    {
+        //        menuSet.SetActive(true);
+        //    }
+        //}
     }
 
     public void StartAction()
@@ -105,10 +118,10 @@ public class Gamemanager : MonoBehaviour
         talkIndex++;
     }
 
-    public void GameExit()
-    {
-        Application.Quit();
-    }
+    //public void GameExit()
+    //{
+    //    Application.Quit();
+    //}
     private static Gamemanager _instance;
     public static Gamemanager Instance
     {
@@ -122,13 +135,13 @@ public class Gamemanager : MonoBehaviour
         }
     }
 
-    public void GameSave()
-    {
-        PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
-        PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
-        PlayerPrefs.Save();
-        menuSet.SetActive(false);
-    }
+    //public void GameSave()
+    //{
+    //    PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
+    //    PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
+    //    PlayerPrefs.Save();
+    //    //menuSet.SetActive(false);
+    //}
 
     //public void GameLoad()
     //{

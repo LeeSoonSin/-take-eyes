@@ -2,16 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
     public string currentMapName; //transferMap 스크립트에 있는 transperMapName 변수의 값을 저장.
+    public string currentSceneName;
     public int MapNum;///transferMap 스크립트에 있는 맵의 변수 값 저장.
     static public PlayerMove instance;
     public bool notMove = false;
 
+    private Save_Load SaveLoad;
     public Gamemanager manager;
     public float Speed = 5; // 플레이어 이동 속도
     Rigidbody2D rigid;
@@ -29,6 +32,7 @@ public class PlayerMove : MonoBehaviour
     Animator anim; //케이디
     void Awake()//플레이어 삭제 방지
     {
+        SaveLoad = FindObjectOfType<Save_Load>();
         if (instance != null)
         {
             Destroy(this.gameObject);
@@ -44,9 +48,20 @@ public class PlayerMove : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();//애니 2(케이디)
         audioSource = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
+        SaveLoad = FindObjectOfType<Save_Load>();
+
+
     }
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.F5))
+        {
+            SaveLoad.CallSave();
+        }
+        if(Input.GetKeyDown(KeyCode.F9))
+        {
+            SaveLoad.CallLoad();
+        }    
         //(isAction 할 경우 움직이지 못하게 해놓음.)
         //움직임 값
         h = manager.isAction ? 0 : Input.GetAxisRaw("Horizontal");
