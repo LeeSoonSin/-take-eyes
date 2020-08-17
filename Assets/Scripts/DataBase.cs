@@ -37,7 +37,6 @@ public class DataBase : MonoBehaviour
             return instance;
         }
     }
-    #endregion Singleton
 
     private void Awake()
     {
@@ -55,7 +54,7 @@ public class DataBase : MonoBehaviour
         DontDestroyOnLoad(this.NumberSystem);
         DontDestroyOnLoad(this.NumCheck);
     }
-
+#endregion Singleton
     public void UseItem(int _itemID)
     {
         switch(_itemID)
@@ -63,18 +62,24 @@ public class DataBase : MonoBehaviour
             case 10002:
                 Debug.Log("제초제를 사용했습니다.");
                 break;
+
             case 10003:
                 Debug.Log("물이 담긴 페트병을 사용했습니다.");
                 break;
+
             case 10004:
                 Debug.Log("페트병을 사용했습니다.");
+                //Inventory.instance.inventoryItemList.Add(new Item(10003, "물이 담긴 페트병", "식물에게 줄까?", Item.ItemType.Use));
                 break;
+
             case 10008:
                 Debug.Log("대걸레 봉을 사용했습니다.");
                 break;
+
             case 10009:
                 Debug.Log("가위를 사용했습니다.");
                 break;
+
             case 10010:
                 Debug.Log("이 종이를 사용해도 아무일이 일어나지 않습니다..");
                 break;

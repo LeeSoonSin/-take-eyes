@@ -22,7 +22,7 @@ public class Inventory : MonoBehaviour
     private Gamemanager manager;
     private InventorySlot[] slots;//인벤토리 슬롯들
     public List<Item> inventoryItemList;//플레이어가 소지한 아이템 리스트
-    private List<Item> inventoryTabList; //선택한 탭에 따라 다르게 보여질 아이템 리스트
+    public List<Item> inventoryTabList; //선택한 탭에 따라 다르게 보여질 아이템 리스트
 
     public Text Description_Text; //부연설명
     public string[] tabDescription;// 탭 부연 설명
@@ -33,8 +33,8 @@ public class Inventory : MonoBehaviour
     public GameObject[] selectedTabImages;
     public GameObject go_OOC; //선택지 활성화 비활성화
 
-    private int selectedItem; //선택된 아이템.
-    private int selectedTab; //선택된 탭.
+    public int selectedItem; //선택된 아이템.
+    public int selectedTab; //선택된 탭.
 
     private bool activated; //인벤토리 활성화시 true
     private bool tabActivated; //탭 활성화시 true
@@ -66,6 +66,8 @@ public class Inventory : MonoBehaviour
             inventoryTabList = new List<Item>();
             slots = tf.GetComponentsInChildren<InventorySlot>();
         }
+
+        inventoryItemList.Add(new Item(10004, "페트병", "무언가를 담기 위해 가져왔다", Item.ItemType.Use));
 
         //여기에 시작하자마자 쓸 수 있는 아이템을 추가할 수 있다.
         // ex) inventoryItemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));

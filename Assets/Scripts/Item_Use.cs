@@ -17,10 +17,10 @@ public class Item_Use : MonoBehaviour
         {
             for (int i = 0; i < Inventory.instance.inventoryItemList.Count; i++)
             {
-                if (Inventory.instance.inventoryItemList[i].itemID == /*Item.instance.itemID*/(Item_id))
+                if (Inventory.instance.inventoryItemList[i].itemID ==  /*Item.instance.itemID*/(Item_id))//인벤토리 번호와 아이템 번호를 검사
                 {
                     DataBase.instance.UseItem(Inventory.instance.inventoryItemList[i].itemID);
-                        Inventory.instance.inventoryItemList.RemoveAt(i);
+                    Inventory.instance.inventoryItemList.RemoveAt(i);
                     break;
                 }
             }

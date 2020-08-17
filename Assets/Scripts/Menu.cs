@@ -6,9 +6,13 @@ public class Menu : MonoBehaviour
 {
     public GameObject go;
     private bool activated;
-
+    public static Menu instance;
     public Gamemanager manager;
 
+    public void Awake()
+    {
+        
+    }
     public void Start()
     {
         manager= FindObjectOfType<Gamemanager>();
