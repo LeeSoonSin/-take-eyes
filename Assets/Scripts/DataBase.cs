@@ -15,6 +15,7 @@ public class DataBase : MonoBehaviour
     public GameObject NumberSystem;
     public GameObject NumCheck;
     public FlyMob thefly;
+    public DoorControl Door;
     public static DataBase instance;
 
     #region Singleton
@@ -43,6 +44,8 @@ public class DataBase : MonoBehaviour
     {
         var objs = FindObjectsOfType<DataBase>();
         thefly = FindObjectOfType<FlyMob>();
+        Door = FindObjectOfType<DoorControl>();
+
         if (objs.Length != 1)
         {
             Destroy(gameObject);
@@ -61,6 +64,16 @@ public class DataBase : MonoBehaviour
     {
         switch(_itemID)
         {
+            case 10000:
+                Debug.Log("열쇠 아이템을 사용했습니다.");
+            break;
+
+            case 10001:
+                Debug.Log("열쇠아이템을 사용했습니다.");
+                Door.Door_Active();
+            break;
+
+
             case 10002:
                 Debug.Log("제초제를 사용했습니다.");
                 break;
@@ -92,7 +105,7 @@ public class DataBase : MonoBehaviour
     }
     void Start()//아이템을 여기에 추가
     {
-        itemList.Add(new Item(10001, "임시 테스트 열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
+        itemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
         itemList.Add(new Item(10002, "제초제", "식물들을 한번에 보낼수 있다.", Item.ItemType.Use));
         itemList.Add(new Item(10003, "물이 담긴 페트병", "식물에게 줄까?", Item.ItemType.Use));
         itemList.Add(new Item(10004, "페트병", "무언가를 담기 위해 가져왔다", Item.ItemType.Use));
