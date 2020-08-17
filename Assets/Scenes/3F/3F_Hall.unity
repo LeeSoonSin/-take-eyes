@@ -14103,6 +14103,7 @@ MonoBehaviour:
   NumberSystem: {fileID: 0}
   NumCheck: {fileID: 0}
   thefly: {fileID: 0}
+  Door: {fileID: 0}
 --- !u!4 &1362695972
 Transform:
   m_ObjectHideFlags: 0
