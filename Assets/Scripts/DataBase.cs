@@ -69,7 +69,7 @@ public class DataBase : MonoBehaviour
 
             case 10004:
                 Debug.Log("페트병을 사용했습니다.");
-                //Inventory.instance.inventoryItemList.Add(new Item(10003, "물이 담긴 페트병", "식물에게 줄까?", Item.ItemType.Use));
+                Inventory.instance.inventoryItemList.Add(new Item(10003, "물이 담긴 페트병", "식물에게 줄까?", Item.ItemType.Use));
                 break;
 
             case 10008:
