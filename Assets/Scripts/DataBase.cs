@@ -14,6 +14,7 @@ public class DataBase : MonoBehaviour
     public GameObject itemPick;
     public GameObject NumberSystem;
     public GameObject NumCheck;
+    public FlyMob thefly;
     public static DataBase instance;
 
     #region Singleton
@@ -41,6 +42,7 @@ public class DataBase : MonoBehaviour
     private void Awake()
     {
         var objs = FindObjectsOfType<DataBase>();
+        thefly = FindObjectOfType<FlyMob>();
         if (objs.Length != 1)
         {
             Destroy(gameObject);
@@ -74,6 +76,7 @@ public class DataBase : MonoBehaviour
 
             case 10008:
                 Debug.Log("대걸레 봉을 사용했습니다.");
+                thefly.MopActive();
                 break;
 
             case 10009:

@@ -68,7 +68,7 @@ public class Inventory : MonoBehaviour
         }
 
         inventoryItemList.Add(new Item(10004, "페트병", "무언가를 담기 위해 가져왔다", Item.ItemType.Use));
-
+        inventoryItemList.Add(new Item(10008, "대걸레 봉", "매우 길다.", Item.ItemType.Use));
         //여기에 시작하자마자 쓸 수 있는 아이템을 추가할 수 있다.
         inventoryItemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
     }//완벽(1)
