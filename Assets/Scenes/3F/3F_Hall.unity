@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 116582748}
   - component: {fileID: 116582751}
   m_Layer: 10
-  m_Name: New Sprite
+  m_Name: Flymob
   m_TagString: Enermy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
