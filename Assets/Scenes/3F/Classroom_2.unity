@@ -188,6 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d7f6dc00e77ab488606f3558f186f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryItemList: []
+  inventoryTabList: []
   Description_Text: {fileID: 903773397}
   tabDescription:
   - "\uC18C\uBAA8\uD558\uB294 \uC544\uC774\uD15C"
@@ -202,6 +204,8 @@ MonoBehaviour:
   - {fileID: 916905349}
   - {fileID: 282544571}
   go_OOC: {fileID: 874583020}
+  selectedItem: 0
+  selectedTab: 0
 --- !u!1 &33237567
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMapName: 
+  currentSceneName: 
   MapNum: 0
   notMove: 0
   manager: {fileID: 205162862}
@@ -699,7 +704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167019684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.46, y: 4.03, z: -0.1}
+  m_LocalPosition: {x: 11.59, y: 4.03, z: -0.1}
   m_LocalScale: {x: 1, y: 0.9649602, z: 1}
   m_Children:
   - {fileID: 475560705}
@@ -937,7 +942,6 @@ MonoBehaviour:
   talkManager: {fileID: 478422420}
   talkText: {fileID: 1553768223}
   scanObject: {fileID: 0}
-  menuSet: {fileID: 0}
   Inventory: {fileID: 19987222}
   Number_System: {fileID: 0}
   portraitImg: {fileID: 1130652713}
@@ -6537,6 +6541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09591ea121e327a43b166ee399c15fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  result: 0
+  correctNumber: 0
   superObject: {fileID: 1264286921}
   panel:
   - {fileID: 1491760493}
@@ -6554,6 +6560,7 @@ MonoBehaviour:
   - {fileID: 2134708513}
   anim: {fileID: 1264286923}
   activated: 0
+  correctFlag: 0
   Text_line: 30
 --- !u!1 &1237389545 stripped
 GameObject:

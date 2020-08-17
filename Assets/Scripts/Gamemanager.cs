@@ -20,6 +20,7 @@ public class Gamemanager : MonoBehaviour
     public bool isAction;
     public int talkIndex;
     public GameObject player;
+    //private CameraManager theCamera; 
     static public Gamemanager instance;
 
 
@@ -31,7 +32,14 @@ public class Gamemanager : MonoBehaviour
     IEnumerator LoadWaitCoroutine()
     {
         yield return new WaitForSeconds(0.5f);
-        thePlayer = FindObjectOfType<PlayerMove>();
+
+        //thePlayer = FindObjectOfType<PlayerMove>();
+        //bounds = FindObjectOfType<Bound>();
+        //theCamera = FindObjectOfType<CameraManager>();
+
+        //theCamera.target = GameObject.Find("Player");
+
+        //for(int i=0)
 
     }
     void Start()
