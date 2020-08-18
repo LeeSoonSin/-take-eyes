@@ -66,6 +66,12 @@ public class DataBase : MonoBehaviour
         {
             case 10000:
                 Debug.Log("열쇠 아이템을 사용했습니다.");
+                //함수
+                //대화창 함수
+
+                //대화창 
+                //함수
+                //{ 대화내용들 }
             break;
 
             case 10001:

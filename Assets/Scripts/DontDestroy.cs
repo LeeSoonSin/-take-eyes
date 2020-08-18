@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestory : MonoBehaviour
+public class DontDestroy : MonoBehaviour
 {
-    private static DontDestory instance;
+    private static DontDestroy instance;
 
-    public static DontDestory Instance
+    public static DontDestroy Instance
     {
         get
         {
             if (instance == null)
             {
-                var obj = FindObjectOfType<DontDestory>();
+                var obj = FindObjectOfType<DontDestroy>();
                 if (obj != null)
                 {
                     instance = obj;
                 }
                 else
                 {
-                    var newObj = new GameObject().AddComponent<DontDestory>();
+                    var newObj = new GameObject().AddComponent<DontDestroy>();
                     instance = newObj;
                 }
             }
@@ -28,7 +28,7 @@ public class DontDestory : MonoBehaviour
     }
     private void Awake()
     {
-        var objs = FindObjectsOfType<DontDestory>();
+        var objs = FindObjectsOfType<DontDestroy>();
         if (objs.Length != 1)
         {
             Destroy(gameObject);

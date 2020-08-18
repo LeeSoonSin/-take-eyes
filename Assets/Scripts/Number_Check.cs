@@ -15,15 +15,15 @@ public class Number_Check : MonoBehaviour
 
     private void Start()
     {
-        if (instance1 != null)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance1 = this;
-        }
+        //if (instance1 != null)
+        //{
+        //    Destroy(this.gameObject);
+        //}
+        //else
+        //{
+        //    DontDestroyOnLoad(this.gameObject);
+        //    instance1 = this;
+        //}
         theNumber = FindObjectOfType<NumberSystem>();
         dataBase = FindObjectOfType<DataBase>();
     }
