@@ -6032,10 +6032,10 @@ MonoBehaviour:
     - "\uC0AC\uC0AC"
     - "\uC0AC\uC0AC"
     sprites:
-    - {fileID: 21300000, guid: 37d3d26f763bc714d96465f6c69a3558, type: 3}
-    - {fileID: 21300000, guid: 683228726d37cc1499972288c54630af, type: 3}
-    - {fileID: 21300000, guid: a7dbaf178ded58b4187eb302e04d0559, type: 3}
-    - {fileID: 21300000, guid: 49b2dca870533184b954123d08b309dd, type: 3}
+    - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
+    - {fileID: 21300000, guid: 9c4c864ac4a4f6e41aa1461f70c0c198, type: 3}
+    - {fileID: 21300000, guid: 07508693e1763af4e91a757aef217227, type: 3}
+    - {fileID: 21300000, guid: c020c8c01e1979c47b02434640ead82e, type: 3}
     - {fileID: 21300000, guid: a77b5dfca62f08747b9f87c4da60c12d, type: 3}
     dialogueWindows:
     - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
@@ -6077,7 +6077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962759167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.34, y: 25.57, z: 0}
+  m_LocalPosition: {x: 7.03, y: 21.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
