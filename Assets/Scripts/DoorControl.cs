@@ -5,32 +5,42 @@ using UnityEngine;
 public class DoorControl : MonoBehaviour
 {
     public float Door_Num;
-    public bool Door_Move;
+    public int Door_Code;
+    public bool Door_Lock;
+    public DataBase thedata;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        thedata = FindObjectOfType<DataBase>();
     }
-
-    public void Door_Active()
+    public void Start()
     {
-        Door_Move = true;
-        if(Door_Move == true)
-        {
-            Debug.Log("문이 열립니다.");
-        }
-    }
-    public void OpenDoor()
-    {
-        if(Door_Move == true)
+        if(thedata.switches[Door_Code] == true)
         {
             gameObject.SetActive(false);
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    //public void Door_Active()
+    //{
+    //    Door_Move = true;
+    //    if(Door_Move == true)
+    //    {
+    //        Debug.Log("문이 열립니다.");
+    //    }
+    //}
+    public void OpenDoor(int A)
     {
-        OpenDoor();
+        if( A == Door_Num)
+        {
+            Debug.Log("문이 열립니다.");
+            gameObject.SetActive(false);
+            thedata.switches[Door_Code] = true;
+        }
     }
+
+    //void Update()
+    //{
+    //    OpenDoor();
+    //}
 }

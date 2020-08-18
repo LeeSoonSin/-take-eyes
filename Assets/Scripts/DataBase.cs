@@ -76,7 +76,7 @@ public class DataBase : MonoBehaviour
 
             case 10001:
                 Debug.Log("열쇠아이템을 사용했습니다.");
-                Door.Door_Active();
+                Door.OpenDoor(10001);
             break;
 
 
@@ -92,6 +92,18 @@ public class DataBase : MonoBehaviour
             case 10004:
                 Debug.Log("페트병을 사용했습니다.");
                 Inventory.instance.inventoryItemList.Add(new Item(10003, "물이 담긴 페트병", "식물에게 줄까?", Item.ItemType.Use));
+                break;
+
+            case 10005:
+                Debug.Log("가정실 열쇠 사용");
+                break;
+
+            case 10006:
+                Debug.Log("진로실 열쇠 사용");
+                break;
+
+            case 10007:
+                Debug.Log("옥상열쇠 사용");
                 break;
 
             case 10008:
@@ -118,11 +130,10 @@ public class DataBase : MonoBehaviour
         itemList.Add(new Item(10005, "가정실 열쇠", "가정실 문을 열 열쇠", Item.ItemType.Use));
         itemList.Add(new Item(10006, "진로실 열쇠", "진로실 문을 열 열쇠", Item.ItemType.Use));
         itemList.Add(new Item(10007, "옥상 열쇠", "옥상 문을 열 열쇠", Item.ItemType.Use));
-        itemList.Add(new Item(10011, "과학실 열쇠", "과학실 문을 열 열쇠", Item.ItemType.Use));
-        itemList.Add(new Item(10012, "교무실 열쇠", "교무실 문을 열 열쇠", Item.ItemType.Use));
         itemList.Add(new Item(10008, "대걸레 봉", "매우 길다.", Item.ItemType.Use));
         itemList.Add(new Item(10009, "가위", "식물줄기를 자를 수 있을 것 같다", Item.ItemType.Use));
         itemList.Add(new Item(10010, "교무실 금고 비밀번호 종이", "종이에는 202020라고 적혀있다.", Item.ItemType.Use));
-        
+        itemList.Add(new Item(10011, "과학실 열쇠", "과학실 문을 열 열쇠", Item.ItemType.Use));
+        itemList.Add(new Item(10012, "교무실 열쇠", "교무실 문을 열 열쇠", Item.ItemType.Use));        
     }
 }
