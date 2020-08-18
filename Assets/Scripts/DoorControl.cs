@@ -6,6 +6,7 @@ public class DoorControl : MonoBehaviour
 {
     public float Door_Num;
     public int Door_Code;
+    public bool Door_Lock;
     public DataBase thedata;
     // Start is called before the first frame update
     void Awake()

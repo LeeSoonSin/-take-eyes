@@ -94,6 +94,18 @@ public class DataBase : MonoBehaviour
                 Inventory.instance.inventoryItemList.Add(new Item(10003, "물이 담긴 페트병", "식물에게 줄까?", Item.ItemType.Use));
                 break;
 
+            case 10005:
+                Debug.Log("가정실 열쇠 사용");
+                break;
+
+            case 10006:
+                Debug.Log("진로실 열쇠 사용");
+                break;
+
+            case 10007:
+                Debug.Log("옥상열쇠 사용");
+                break;
+
             case 10008:
                 Debug.Log("대걸레 봉을 사용했습니다.");
                 thefly.MopActive();
