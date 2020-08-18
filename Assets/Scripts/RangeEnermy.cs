@@ -15,10 +15,16 @@ public class RangeEnermy : MonoBehaviour
     public GameObject projectile;
     public Transform player;
 
+    Animator anim;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         CoolTime = startCool;
+    }
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
     }
 
     void Update()

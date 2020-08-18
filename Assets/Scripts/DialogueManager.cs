@@ -36,9 +36,11 @@ public class DialogueManager : MonoBehaviour
     public Animator animSprite;
     public Animator animDialogueWindow;
 
+    private Gamemanager gameManager;
 
-    public string typeSound;
-    public string enterSound;
+
+    //public string typeSound;
+    //public string enterSound;
 
     //private AudioManager theAudio;
 
@@ -54,12 +56,13 @@ public class DialogueManager : MonoBehaviour
         listSprites = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
         //theAudio = FindObjectOfType<AudioManager>();
+        gameManager = FindObjectOfType<Gamemanager>();
     }
 
     public void ShowDialogue(Dialogue dialogue)
     {
         talking = true;
-
+        gameManager.StopAction();
         for (int i = 0; i < dialogue.sentences.Length; i++)
         {
             listSentences.Add(dialogue.sentences[i]);
@@ -81,6 +84,7 @@ public class DialogueManager : MonoBehaviour
         animSprite.SetBool("Appear", false);
         animDialogueWindow.SetBool("Appear", false);
         talking = false;
+        gameManager.StartAction();
     }
 
 
@@ -124,10 +128,10 @@ public class DialogueManager : MonoBehaviour
         for (int i = 0; i < listSentences[count].Length; i++)
         {
             text.text += listSentences[count][i]; // 1글자씩 출력.
-            if (i % 7 == 1)
+            /*if (i % 7 == 1)
             {
                 //theAudio.Play(typeSound);
-            }
+            }*/
             yield return new WaitForSeconds(0.01f);
         }
 

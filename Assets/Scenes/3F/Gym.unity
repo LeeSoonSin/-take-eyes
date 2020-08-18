@@ -2730,6 +2730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMapName: 
+  currentSceneName: 
   MapNum: 0
   notMove: 0
   manager: {fileID: 2058307065}
@@ -2875,6 +2876,7 @@ GameObject:
   - component: {fileID: 584790482}
   - component: {fileID: 584790481}
   - component: {fileID: 584790480}
+  - component: {fileID: 584790485}
   m_Layer: 0
   m_Name: RangeMob (1)
   m_TagString: Untagged
@@ -2987,7 +2989,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eff8947351f7ea6429120ff99962811f, type: 3}
+  m_Sprite: {fileID: 5757044703518920116, guid: c731213fcc0bdce429967d2b1c2144cc,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3012,6 +3015,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &584790485
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584790479}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 84f56772900d6bf4ca85f5de41e52793, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &595493870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4810,7 +4832,6 @@ MonoBehaviour:
   talkManager: {fileID: 0}
   talkText: {fileID: 0}
   scanObject: {fileID: 0}
-  menuSet: {fileID: 0}
   Inventory: {fileID: 0}
   Number_System: {fileID: 0}
   portraitImg: {fileID: 0}
@@ -4844,6 +4865,7 @@ GameObject:
   - component: {fileID: 2066815887}
   - component: {fileID: 2066815886}
   - component: {fileID: 2066815885}
+  - component: {fileID: 2066815890}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -4941,7 +4963,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eff8947351f7ea6429120ff99962811f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f81bf2900941dba44ba824bb0aab2fc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4966,6 +4988,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2066815890
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066815884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2660687e41d4aec49a01403a7f5bb9a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2090046875
 GameObject:
   m_ObjectHideFlags: 0
