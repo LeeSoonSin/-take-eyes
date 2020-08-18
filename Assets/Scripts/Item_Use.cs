@@ -12,9 +12,10 @@ public class Item_Use : MonoBehaviour
         database = FindObjectOfType<DataBase>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+
+        if (Input.GetButtonDown("Jump"))
         {
             for (int i = 0; i < Inventory.instance.inventoryItemList.Count; i++)
             {
@@ -26,6 +27,18 @@ public class Item_Use : MonoBehaviour
                 }
             }
         }
+        //if (collision.gameObject.name == "Player")
+        //{
+        //    for (int i = 0; i < Inventory.instance.inventoryItemList.Count; i++)
+        //    {
+        //        if (Inventory.instance.inventoryItemList[i].itemID == (Item_id))//인벤토리 번호와 사용할아이템 번호를 검사
+        //        {
+        //            database.UseItem(Inventory.instance.inventoryItemList[i].itemID);
+        //            Inventory.instance.inventoryItemList.RemoveAt(i);
+        //            break;
+        //        }
+        //    }
+        //}
     }
     // Update is called once per frame
     void Update()
