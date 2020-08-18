@@ -6026,11 +6026,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - "\uC5B4?"
-    - "\uC65C "
-    - "\uB098\uB294"
-    - "\uC0AC\uC0AC"
-    - "\uC0AC\uC0AC"
+    - asdasd
+    - sadasd
+    - asdas
+    - asd
+    - dsa
     sprites:
     - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
     - {fileID: 21300000, guid: 9c4c864ac4a4f6e41aa1461f70c0c198, type: 3}
