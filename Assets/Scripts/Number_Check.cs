@@ -30,6 +30,7 @@ public class Number_Check : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if(dataBase.switches[0] == false)
         {
             if (theNumber.correctFlag == true )

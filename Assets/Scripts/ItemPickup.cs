@@ -6,15 +6,30 @@ public class ItemPickup : MonoBehaviour
 {
     public int itemID;
     public int _count;
-    
-    private void OnTriggerStay2D(Collider2D collision)
+
+    public DataBase dataBase;
+    private void Awake()
     {
-        if(Input.GetButtonDown("Jump"))
+        dataBase = FindObjectOfType<DataBase>();
+    }
+
+    public void Start()
+    {
+        if (dataBase.switches[1] == true)
         {
-            Inventory.instance.GetAnItem(itemID, _count);
             Destroy(this.gameObject);
+
         }
     }
 
-    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                Inventory.instance.GetAnItem(itemID, _count);
+                Destroy(this.gameObject);
+                dataBase.switches[1] = true;
+            }
+    }
 }
