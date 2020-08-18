@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class Gamemanager : MonoBehaviour
 {
     private PlayerMove thePlayer;
+
     public GameObject talkPanel;
     public TalkManager talkManager;
     public Text talkText;
@@ -33,13 +34,11 @@ public class Gamemanager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        //thePlayer = FindObjectOfType<PlayerMove>();
-        //bounds = FindObjectOfType<Bound>();
+        thePlayer = FindObjectOfType<PlayerMove>();
+        //bounds = FindObjectsOfType<Bound>();
         //theCamera = FindObjectOfType<CameraManager>();
 
         //theCamera.target = GameObject.Find("Player");
-
-        //for(int i=0)
 
     }
     void Start()
@@ -66,17 +65,6 @@ public class Gamemanager : MonoBehaviour
     }
     void Update()
     {
-        //if (Input.GetButtonDown("Cancel"))
-        //{
-        //    if(menuSet.activeSelf)
-        //    {
-        //        menuSet.SetActive(false);
-        //    }
-        //    else
-        //    {
-        //        menuSet.SetActive(true);
-        //    }
-        //}
     }
 
     public void StartAction()

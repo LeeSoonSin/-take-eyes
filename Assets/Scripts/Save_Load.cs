@@ -52,6 +52,8 @@ public class Save_Load : MonoBehaviour
         data.SceneName = thePlayer.currentSceneName;
         Debug.Log("플레이어 저장됨.");
 
+        data.playerItemInventory.Clear();
+
         for (int i =0; i < theDatabase.var_name.Length;i++)
         {
             data.varNameList.Add(theDatabase.var_name[i]);
@@ -68,6 +70,7 @@ public class Save_Load : MonoBehaviour
         for(int i=0; i < itemList.Count; i++)
         {
             data.playerItemInventory.Add(itemList[i].itemID);
+            //data.playerItemInventoryCount.Add(itemList[i].itemCount);
         }
         Debug.Log("인벤토리 저장됨.");
 
@@ -107,6 +110,7 @@ public class Save_Load : MonoBehaviour
             theDatabase.switch_name = data.swNameList.ToArray();
 
             List<Item> itemList = new List<Item>();
+
             for(int i =0; i < data.playerItemInventory.Count; i++)
             {
                 for(int x =0; x< theDatabase.itemList.Count;x++)
@@ -114,11 +118,17 @@ public class Save_Load : MonoBehaviour
                     if (data.playerItemInventory[i] == theDatabase.itemList[x].itemID)
                     {
                         itemList.Add(theDatabase.itemList[x]);
+                        Debug.Log("인벤토리를 로드했습니다." +theDatabase.itemList[x].itemID);
 
                         break;
                     }
                 }
             }
+
+            //for(int i =0; i < data.playerItemInventoryCount.Count;i++)
+            //{
+            //    itemList[i].itemCount = data.playerItemInventoruCount[i];
+            //}
 
             theInven.LoadItem(itemList);
 
