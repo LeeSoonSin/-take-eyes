@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DataBase : MonoBehaviour
 {
-    public string[] var_name;
-    public float[] var;
+    public string[] var_name; // 변수 이름
+    public float[] var;//float 값을 기억
 
     public string[] switch_name;
-    public bool[] switches;
+    public bool[] switches; // true false 값을 기억 
 
     public List<Item> itemList = new List<Item>();
     public GameObject itemPick;

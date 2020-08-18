@@ -337,7 +337,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flag: 0
-  correctNumber: 421
+  correctNum: 202020
+  gift: 0
 --- !u!61 &422096099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3266,6 +3267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09591ea121e327a43b166ee399c15fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  result: 0
+  correctNumber: 2020202
   superObject: {fileID: 501406219}
   panel:
   - {fileID: 2091665412}
@@ -3273,14 +3276,17 @@ MonoBehaviour:
   - {fileID: 1321131848}
   - {fileID: 1200420083}
   - {fileID: 290183855}
+  - {fileID: 1314170519}
   Number_Text:
   - {fileID: 582616179}
   - {fileID: 682144390}
   - {fileID: 146896784}
   - {fileID: 2008647482}
   - {fileID: 1960483058}
+  - {fileID: 426191870}
   anim: {fileID: 501406221}
   activated: 0
+  correctFlag: 0
   Text_line: 30
 --- !u!1 &1731607467
 GameObject:

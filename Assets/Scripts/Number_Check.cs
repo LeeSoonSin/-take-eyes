@@ -25,26 +25,35 @@ public class Number_Check : MonoBehaviour
             instance1 = this;
         }
         theNumber = FindObjectOfType<NumberSystem>();
+        dataBase = FindObjectOfType<DataBase>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (theNumber.correctFlag == true)
+        if(dataBase.switches[0] == false)
         {
-            flag = true;
-            Debug.Log("작동은 잘됨");
-            if (!gift)
-            {
-                Inventory.instance.inventoryItemList.Add(new Item(10001, "임시 테스트 열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
-            }
-            gift = true;
+            if (theNumber.correctFlag == true )
+                {
+                    flag = true;
+                    Debug.Log("작동은 잘됨");
+                    if (!gift)
+                    {
+                        Inventory.instance.inventoryItemList.Add(new Item(10001, "임시 테스트 열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
+                    }
+                    gift = true;
+                    dataBase.switches[0] = true;
 
-
+                }
+                else if (collision.gameObject.name == "Player" && !flag)
+                {
+                    StartCoroutine(ACoroutine());
+                }
         }
-        else if (collision.gameObject.name == "Player" && !flag)
+        else
         {
-            StartCoroutine(ACoroutine());
+            Debug.Log("이미 사용했습니다.");
         }
+    
     }
     IEnumerator ACoroutine()
     {
