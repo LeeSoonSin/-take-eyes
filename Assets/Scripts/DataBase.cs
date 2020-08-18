@@ -96,14 +96,17 @@ public class DataBase : MonoBehaviour
 
             case 10005:
                 Debug.Log("가정실 열쇠 사용");
+                Door.OpenDoor(10005);
                 break;
 
             case 10006:
                 Debug.Log("진로실 열쇠 사용");
+                Door.OpenDoor(10006);
                 break;
 
             case 10007:
                 Debug.Log("옥상열쇠 사용");
+                Door.OpenDoor(10007);
                 break;
 
             case 10008:
@@ -117,6 +120,15 @@ public class DataBase : MonoBehaviour
 
             case 10010:
                 Debug.Log("이 종이를 사용해도 아무일이 일어나지 않습니다..");
+                break;
+
+            case 10011:
+                Debug.Log("과학실 열쇠를 사용");
+                Door.OpenDoor(10011);
+                break;
+            case 10012:
+                Debug.Log("교무실 열쇠를 사용했습니다.");
+                Door.OpenDoor(10012);
                 break;
 
         }
