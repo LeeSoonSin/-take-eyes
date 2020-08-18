@@ -45,14 +45,17 @@ EditorBuildSettings:
     path: Assets/Scenes/3F/restroom_4.unity
     guid: 7506a9ef70d7b924b903bb2f773b621f
   - enabled: 1
-    path: Assets/Scenes/3F/Staffroom_2.unity
-    guid: e566ac7164f2a7144be016b255f005f9
+    path: Assets/Scenes/3F/Jinro.unity
+    guid: c12462e52028363408b64f498e03d0b9
   - enabled: 1
     path: Assets/Scenes/2F/2F_restroom_1.unity
     guid: 99546c21a2b03514ea1ebf5b37c97bcb
   - enabled: 1
     path: Assets/Scenes/2F/2F_restroom_2.unity
     guid: d8aa0c6d3b91ffe43a9a36d6412b23c8
+  - enabled: 1
+    path: Assets/Scenes/3F/Roof.unity
+    guid: c3cdc7e7515e1124b8a54a5a2c68acb8
   - enabled: 1
     path: Assets/Scenes/2F/2F_Staffroom.unity
     guid: 17f42b20aff963b4a89a461e30bdc537
