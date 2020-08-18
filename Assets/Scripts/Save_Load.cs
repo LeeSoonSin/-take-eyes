@@ -18,6 +18,7 @@ public class Save_Load : MonoBehaviour
 
         
         public List<int> playerItemInventory;//풀레이어가 소지한 아이템
+        public List<int> playerItemInventoryCount;
 
         public string mapName;
         public string SceneName;
@@ -67,10 +68,11 @@ public class Save_Load : MonoBehaviour
 
         //인벤토리 저장
         List<Item> itemList = theInven.SaveItem();
+
         for(int i=0; i < itemList.Count; i++)
         {
             data.playerItemInventory.Add(itemList[i].itemID);
-            //data.playerItemInventoryCount.Add(itemList[i].itemCount);
+            data.playerItemInventoryCount.Add(itemList[i].itemCount);
         }
         Debug.Log("인벤토리 저장됨.");
 
@@ -108,6 +110,9 @@ public class Save_Load : MonoBehaviour
             theDatabase.var_name = data.varNameList.ToArray();
             theDatabase.switches = data.swList.ToArray();
             theDatabase.switch_name = data.swNameList.ToArray();
+
+            Debug.Log("플레이어 로드됨.");
+
 
             List<Item> itemList = new List<Item>();
 
