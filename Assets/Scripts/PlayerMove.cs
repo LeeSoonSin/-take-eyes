@@ -52,7 +52,7 @@ public class PlayerMove : MonoBehaviour
 
 
     }
-    void Update()
+    public void Update() //public 없애자
     {
         if(Input.GetKeyDown(KeyCode.F5))
         {
