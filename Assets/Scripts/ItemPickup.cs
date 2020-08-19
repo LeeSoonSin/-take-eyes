@@ -23,7 +23,6 @@ public class ItemPickup : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-
             if (Input.GetButtonDown("Jump"))
             {
                 Inventory.instance.GetAnItem(itemID,_count);

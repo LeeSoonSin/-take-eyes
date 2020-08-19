@@ -5,8 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour
 {
+    public SpawnPoint spawn;
+
+    public void Start()
+    {
+        spawn = FindObjectOfType<SpawnPoint>();
+    }
     public void GameStart()
     {
-         SceneManager.LoadScene("3F_Hall");
+         SceneManager.LoadScene("Classroom_2");
+
+
+
+        spawn.Spawn();
     }
 }
