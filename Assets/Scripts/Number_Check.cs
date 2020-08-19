@@ -12,7 +12,9 @@ public class Number_Check : MonoBehaviour
     public bool flag;
     public int correctNum;
     public bool gift;
-
+    public int itemID;
+    public int _count;
+    public int DataNum;
     private void Start()
     {
         //if (instance1 != null)
@@ -31,7 +33,7 @@ public class Number_Check : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if(dataBase.switches[0] == false)
+        if(dataBase.switches[DataNum] == false)
         {
             if (theNumber.correctFlag == true )
                 {
@@ -39,10 +41,12 @@ public class Number_Check : MonoBehaviour
                     Debug.Log("작동은 잘됨");
                     if (!gift)
                     {
-                        Inventory.instance.inventoryItemList.Add(new Item(10001, "임시 테스트 열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
-                    }
+                    Inventory.instance.GetAnItem(itemID, _count);
+                    //Inventory.instance.inventoryItemList.Add(new Item(10001, "열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
+                    //Inventory.instance.inventoryItemList.Add(new Item(10001, "임시 테스트 열쇠", "어딘가의 문을 열 열쇠", Item.ItemType.Use));
+                }
                     gift = true;
-                    dataBase.switches[0] = true;
+                    dataBase.switches[DataNum] = true;
 
                 }
                 else if (collision.gameObject.name == "Player" && !flag)

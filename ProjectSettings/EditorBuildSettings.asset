@@ -45,6 +45,9 @@ EditorBuildSettings:
     path: Assets/Scenes/3F/restroom_4.unity
     guid: 7506a9ef70d7b924b903bb2f773b621f
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 975ccca28e7bc18438f1a95d1f1a88c1
+  - enabled: 1
     path: Assets/Scenes/3F/Jinro.unity
     guid: c12462e52028363408b64f498e03d0b9
   - enabled: 1

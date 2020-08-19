@@ -260,8 +260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 536e5f78eb0bb8f438690bd26efb9cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  startWaitTime: 2
+  speed: 10
+  startWaitTime: 0.1
   moveSpots:
   - {fileID: 1449392783}
   - {fileID: 495884283}
@@ -323,7 +323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216574623}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0393372, y: -1.5819016, z: 20.038506}
+  m_LocalPosition: {x: -0.87, y: -1.61, z: 20.038506}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1361438550}
@@ -799,7 +799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495884282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.444407, y: -2.4043074, z: 2.7211914}
+  m_LocalPosition: {x: 13.444407, y: -2.28, z: 2.7211914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1517258383}
@@ -2669,6 +2669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 10004
   _count: 1
+  DataNum: 0
+  dataBase: {fileID: 0}
 --- !u!95 &1157283316
 Animator:
   serializedVersion: 3

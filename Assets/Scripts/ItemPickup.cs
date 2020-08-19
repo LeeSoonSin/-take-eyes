@@ -6,7 +6,7 @@ public class ItemPickup : MonoBehaviour
 {
     public int itemID;
     public int _count;
-
+    public int DataNum; 
     public DataBase dataBase;
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class ItemPickup : MonoBehaviour
 
     public void Start()
     {
-        if (dataBase.switches[1] == true)
+        if (dataBase.switches[DataNum] == true)
         {
             Destroy(this.gameObject);
 
@@ -27,9 +27,9 @@ public class ItemPickup : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
-                Inventory.instance.GetAnItem(itemID, _count);
+                Inventory.instance.GetAnItem(itemID);
                 Destroy(this.gameObject);
-                dataBase.switches[1] = true;
+                dataBase.switches[DataNum] = true;
             }
     }
 }

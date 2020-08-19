@@ -11,9 +11,9 @@ public class DataBase : MonoBehaviour
     public bool[] switches; // true false 값을 기억 
 
     public List<Item> itemList = new List<Item>();
-    public GameObject itemPick;
-    public GameObject NumberSystem;
-    public GameObject NumCheck;
+    //public GameObject itemPick;
+    //public GameObject NumberSystem;
+    //public GameObject NumCheck;
     public FlyMob thefly;
     public DoorControl Door;
     public static DataBase instance;
@@ -49,15 +49,15 @@ public class DataBase : MonoBehaviour
         if (objs.Length != 1)
         {
             Destroy(gameObject);
-            Destroy(this.itemPick);
-            Destroy(this.NumberSystem);
-            Destroy(this.NumCheck);
+            //Destroy(this.itemPick);
+            //Destroy(this.NumberSystem);
+            //Destroy(this.NumCheck);
             return;
         }
         DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(this.itemPick);
-        DontDestroyOnLoad(this.NumberSystem);
-        DontDestroyOnLoad(this.NumCheck);
+        //DontDestroyOnLoad(this.itemPick);
+        //DontDestroyOnLoad(this.NumberSystem);
+        //DontDestroyOnLoad(this.NumCheck);
     }
 #endregion Singleton
     public void UseItem(int _itemID)
@@ -66,19 +66,13 @@ public class DataBase : MonoBehaviour
         {
             case 10000:
                 Debug.Log("열쇠 아이템을 사용했습니다.");
-                //함수
-                //대화창 함수
 
-                //대화창 
-                //함수
-                //{ 대화내용들 }
             break;
 
             case 10001:
                 Debug.Log("열쇠아이템을 사용했습니다.");
                 Door.OpenDoor(10001);
             break;
-
 
             case 10002:
                 Debug.Log("제초제를 사용했습니다.");

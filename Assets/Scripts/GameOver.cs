@@ -9,7 +9,7 @@ public class GameOver : MonoBehaviour
     {
        if(Input.GetButtonDown("Jump"))
         {
-            SceneManager.LoadScene("Classroom_1");
+            SceneManager.LoadScene("Title");
         }
     }
 }

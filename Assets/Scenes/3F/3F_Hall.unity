@@ -391,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76f24d15b66ee04989b7e1f0d4bc83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyList: 
 --- !u!114 &80910130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11935,7 +11936,7 @@ MonoBehaviour:
   switch_name:
   - NumSystem_1
   - 
-  switches: 0000
+  switches: 0000000000
   itemList:
   - itemID: 0
     itemName: 
@@ -13391,6 +13392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 10002
   _count: 1
+  DataNum: 1
   dataBase: {fileID: 0}
 --- !u!212 &1712148168
 SpriteRenderer:
