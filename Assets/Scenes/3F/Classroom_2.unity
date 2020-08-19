@@ -394,7 +394,7 @@ RectTransform:
   m_Children:
   - {fileID: 1711247620}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9203,97 +9203,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586359341}
   m_CullTransparentMesh: 0
---- !u!1 &1622448207
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1622448210}
-  - component: {fileID: 1622448209}
-  - component: {fileID: 1622448208}
-  m_Layer: 0
-  m_Name: TalkBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1622448208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622448207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8109d1870e2bf4344b26aab3fdb3858f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    sentences:
-    - "\uC5B4?"
-    - "\uC65C "
-    - "\uB098\uB294"
-    - "\uC0AC\uC0AC"
-    - "\uC0AC\uC0AC"
-    sprites:
-    - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
-    - {fileID: 21300000, guid: 9c4c864ac4a4f6e41aa1461f70c0c198, type: 3}
-    - {fileID: 21300000, guid: 07508693e1763af4e91a757aef217227, type: 3}
-    - {fileID: 21300000, guid: c020c8c01e1979c47b02434640ead82e, type: 3}
-    - {fileID: 21300000, guid: a77b5dfca62f08747b9f87c4da60c12d, type: 3}
-    dialogueWindows:
-    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
-    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
-    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
-    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
-    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
-  DataNum: 0
-  thedata: {fileID: 0}
---- !u!61 &1622448209
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622448207}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2}
-  m_EdgeRadius: 0
---- !u!4 &1622448210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622448207}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.43, y: -2.67, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1639323232 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 939977248502870139, guid: cbf150097971f5d4cb07936ce24f321c,
@@ -9478,23 +9387,23 @@ MonoBehaviour:
   dialogue:
     sentences:
     - "\uC5B4?"
-    - "\uC65C "
-    - "\uB098\uB294"
-    - "\uC0AC\uC0AC"
-    - "\uC0AC\uC0AC"
+    - "\uC624\uB7AB\uB3D9\uC548 \uC7A4\uB098? \uB2E4\uB4E4 \uC5B4\uB514\uAC14\uC9C0;;"
+    - "\uB2E4\uC74C\uC2DC\uAC04\uC774...\uCCB4\uC721\uC774\uB358\uAC00...?"
+    - .......
+    - "\uC77C\uB2E8 \uC2DC\uAC04\uD45C\uB97C \uD655\uC778\uD558\uC790!"
     sprites:
     - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
     - {fileID: 21300000, guid: 9c4c864ac4a4f6e41aa1461f70c0c198, type: 3}
-    - {fileID: 21300000, guid: 07508693e1763af4e91a757aef217227, type: 3}
-    - {fileID: 21300000, guid: c020c8c01e1979c47b02434640ead82e, type: 3}
-    - {fileID: 21300000, guid: a77b5dfca62f08747b9f87c4da60c12d, type: 3}
+    - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
+    - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
+    - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
     dialogueWindows:
     - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
     - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
     - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
     - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
     - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
-  DataNum: 0
+  DataNum: 8
   thedata: {fileID: 0}
 --- !u!61 &1722750533
 BoxCollider2D:
@@ -9534,7 +9443,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1738442713
 PrefabInstance:
@@ -10030,6 +9939,7 @@ GameObject:
   - component: {fileID: 1856182228}
   - component: {fileID: 1856182227}
   - component: {fileID: 1856182226}
+  - component: {fileID: 1856182229}
   m_Layer: 8
   m_Name: Friend
   m_TagString: Untagged
@@ -10127,6 +10037,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1856182229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856182225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eedc2998b094549ae3280a1724b609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue_1:
+    sentences:
+    - "\uC601\uC778\uC544!"
+    - "\uAD50\uC2E4\uC5D0 \uC788\uC5C8\uAD6C\uB098. \uC560\uB4E4\uC740 \uCCB4\uC721\uC218\uC5C5\uC774\uB77C
+      \uB2E4\uB4E4 \uB098\uAC04\uAC70\uC57C?"
+    - "\uB098\uB3C4 \uBC29\uAE08 \uC77C\uC5B4\uB098\uC11C \uC798 \uBAA8\uB974\uACA0\uC5B4.
+      \uC77C\uB2E8 \uB098\uAC00\uBCF4\uC790"
+    - "\uADF8\uB798, \uAC19\uC774 \uAC00\uC790!"
+    - "\uC601\uC778\uC774\uC640 \uB3D9\uD589\uD558\uAC8C \uB418\uC5C8\uB2E4."
+    sprites:
+    - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
+    - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
+    - {fileID: 21300000, guid: dbd03eeb3a1b2204884c29abc104a2f1, type: 3}
+    - {fileID: 21300000, guid: 89bd7f2ee10a12f42bed2f3dde437297, type: 3}
+    - {fileID: 21300000, guid: e91b0388bf854ec43b99d98671524ea8, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
+    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
+    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
+    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
+    - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
+  DataNum: 9
+  thedata: {fileID: 0}
 --- !u!1 &1879360298
 GameObject:
   m_ObjectHideFlags: 0
