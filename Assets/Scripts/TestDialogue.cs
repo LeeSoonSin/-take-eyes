@@ -9,7 +9,6 @@ public class TestDialogue : MonoBehaviour
     public int DataNum;
     private DialogueManager theDM;
     public DataBase thedata;
-    private bool flag;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +21,7 @@ public class TestDialogue : MonoBehaviour
         if(collision.gameObject.name == "Player" && thedata.switches[DataNum] == false)
         {
             theDM.ShowDialogue(dialogue);
-            flag = true;
             thedata.switches[DataNum] = true;
-
         }
     }
 }
