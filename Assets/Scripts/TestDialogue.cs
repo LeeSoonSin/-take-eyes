@@ -6,21 +6,25 @@ public class TestDialogue : MonoBehaviour
 {
     [SerializeField]
     public Dialogue dialogue;
-
+    public int DataNum;
     private DialogueManager theDM;
+    public DataBase thedata;
     private bool flag;
     // Start is called before the first frame update
     void Start()
     {
         theDM = FindObjectOfType<DialogueManager>();
+        thedata = FindObjectOfType<DataBase>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Player" && !flag)
+        if(collision.gameObject.name == "Player" && thedata.switches[DataNum] == false)
         {
             theDM.ShowDialogue(dialogue);
             flag = true;
+            thedata.switches[DataNum] = true;
+
         }
     }
 }

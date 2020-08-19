@@ -1345,6 +1345,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
     - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
     - {fileID: 21300000, guid: 0254d144c4e70684ab5b3cdfe3a4348f, type: 3}
+  DataNum: 6
+  thedata: {fileID: 0}
 --- !u!61 &520687644
 BoxCollider2D:
   m_ObjectHideFlags: 0

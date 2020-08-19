@@ -27,7 +27,7 @@ public class ItemPickup : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
-                Inventory.instance.GetAnItem(itemID);
+                Inventory.instance.GetAnItem(itemID,_count);
                 Destroy(this.gameObject);
                 dataBase.switches[DataNum] = true;
             }

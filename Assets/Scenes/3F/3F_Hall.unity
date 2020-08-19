@@ -391,7 +391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76f24d15b66ee04989b7e1f0d4bc83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyList: 
 --- !u!114 &80910130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11936,7 +11935,7 @@ MonoBehaviour:
   switch_name:
   - NumSystem_1
   - 
-  switches: 0000000000
+  switches: 00000000000000000000
   itemList:
   - itemID: 0
     itemName: 
@@ -11944,9 +11943,6 @@ MonoBehaviour:
     itemCount: 0
     itemIcon: {fileID: 0}
     itemType: 0
-  itemPick: {fileID: 0}
-  NumberSystem: {fileID: 0}
-  NumCheck: {fileID: 0}
   thefly: {fileID: 0}
   Door: {fileID: 0}
 --- !u!4 &1362695972
