@@ -81,11 +81,12 @@ public class Inventory : MonoBehaviour
         {
             if(_itemID == dataBase.itemList[i].itemID)//데이터베이스에 아이템 발견
             {
-                for(int j=0; j<inventoryItemList.Count; j++)//소지품에 같은 아이템이 있는지 검색
+                //여기부터 작동 안됨
+                for (int j=0; j<inventoryItemList.Count; j++)//소지품에 같은 아이템이 있는지 검색
                 {
-                    if(inventoryItemList[j].itemID == _itemID)//소지품에 같은 아이템이 있다. ->개수만 증감시켜줌
+                    if (inventoryItemList[j].itemID == _itemID)//소지품에 같은 아이템이 있다. ->개수만 증감시켜줌
                     {
-                        if(inventoryItemList[i].itemType == Item.ItemType.Use)
+                        if (inventoryItemList[i].itemType == Item.ItemType.Use)
                         {
                             inventoryItemList[j].itemCount += _count;
                             return;
