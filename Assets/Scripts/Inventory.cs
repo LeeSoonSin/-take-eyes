@@ -361,24 +361,24 @@ public class Inventory : MonoBehaviour
                         }
                         SelectedItem();
                     }
-                    //else if (Input.GetKeyDown(KeyCode.Z) && !preventExec)
-                    //{
-                    //    if(selectedTab ==0)//소모품
-                    //    {
-                    //        stopKeyInput = true;
-                    //        StartCoroutine(OOCCoroutine());
-                    //        //물약을 마실거냐? 같은 선택지 호출
-                    //    }
-                    //    else if(selectedTab ==1)
-                    //    {
-                    //        //장비 장착
-                    //    }
-                    //    else//비프음 출력
-                    //    {
-                    //        Debug.Log("음악이 업서요 ㅜㅜ");
-                    //    }
+                    else if (Input.GetKeyDown(KeyCode.Z) && !preventExec)
+                    {
+                        if(selectedTab ==0)//소모품
+                        {
+                            stopKeyInput = true;
+                            StartCoroutine(OOCCoroutine());
+                            //물약을 마실거냐? 같은 선택지 호출
+                        }
+                        else if(selectedTab ==1)
+                        {
+                            //장비 장착
+                        }
+                        else//비프음 출력
+                        {
+                            Debug.Log("음악이 업서요 ㅜㅜ");
+                        }
                         
-                    //}
+                    }
                     else if (Input.GetKeyDown(KeyCode.X))
                     {
                         StopAllCoroutines();
@@ -397,32 +397,32 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    //IEnumerator OOCCoroutine()
-    //{
-    //    go_OOC.SetActive(true);
-    //    theOOC.ShowTwoChoice("사용한다", "취소한다");
-    //    yield return new WaitUntil(() => !theOOC.activated);
-    //    if (theOOC.GetResult())
-    //    {
-    //        for (int i = 0; i < inventoryItemList.Count; i++)
-    //        {
-    //            if (inventoryItemList[i].itemID == inventoryTabList[selectedItem].itemID)
-    //            {
-    //                dataBase.UseItem(inventoryItemList[i].itemID);
-    //                if (inventoryItemList[i].itemCount > 1)
-    //                {
-    //                    inventoryItemList[i].itemCount--;
-    //                }
-    //                else
-    //                {
-    //                    inventoryItemList.RemoveAt(i);
-    //                }
-    //                ShowItem();
-    //                break;
-    //            }
-    //        }
-    //    }
-    //    stopKeyInput = false;
-    //    go_OOC.SetActive(false);
-    //}
+    IEnumerator OOCCoroutine()
+    {
+        go_OOC.SetActive(true);
+        theOOC.ShowTwoChoice("사용한다", "취소한다");
+        yield return new WaitUntil(() => !theOOC.activated);
+        if (theOOC.GetResult())
+        {
+            for (int i = 0; i < inventoryItemList.Count; i++)
+            {
+                if (inventoryItemList[i].itemID == inventoryTabList[selectedItem].itemID)
+                {
+                    dataBase.UseItem(inventoryItemList[i].itemID);
+                    if (inventoryItemList[i].itemCount > 1)
+                    {
+                        inventoryItemList[i].itemCount--;
+                    }
+                    else
+                    {
+                        inventoryItemList.RemoveAt(i);
+                    }
+                    ShowItem();
+                    break;
+                }
+            }
+        }
+        stopKeyInput = false;
+        go_OOC.SetActive(false);
+    }
 }
