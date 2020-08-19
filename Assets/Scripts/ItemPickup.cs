@@ -18,7 +18,6 @@ public class ItemPickup : MonoBehaviour
         if (dataBase.switches[DataNum] == true)
         {
             Destroy(this.gameObject);
-
         }
     }
 
