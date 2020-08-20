@@ -37,7 +37,7 @@ public class MoveSystem : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos;
 
@@ -48,15 +48,15 @@ public class MoveSystem : MonoBehaviour
             startPosY = mousePos.y - this.transform.localPosition.y;
 
             moving = true;
-            
-        }    
+
+        }
     }
 
     private void OnMouseUp()
     {
         moving = false ;
 
-        if(Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x)<= 0.5f &&
+        if(Mathf.Abs(this.transform.localPosition.x - correctForm.transform.localPosition.x) <= 0.5f &&
            Mathf.Abs(this.transform.localPosition.y - correctForm.transform.localPosition.y) <= 0.5f)
         {
             this.transform.position = new Vector3(correctForm.transform.position.x,
