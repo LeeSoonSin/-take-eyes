@@ -63,7 +63,8 @@ public class DataBase : MonoBehaviour
 
             case 10001:
                 Debug.Log("열쇠아이템을 사용했습니다.");
-                Door.OpenDoor(DoorNumb);
+                DoorNumb = 10001;
+                DoorControl.instance1.OpenDoor(DoorNumb);
             break;
 
             case 10002:
@@ -83,7 +84,7 @@ public class DataBase : MonoBehaviour
             case 10005:
                 DoorNumb = 10005;
                 Debug.Log(DoorNumb);
-                Door.OpenDoor(DoorNumb);
+                DoorControl.instance1.OpenDoor(DoorNumb);
                 Debug.Log("가정실 열쇠 사용");
                 break;
 

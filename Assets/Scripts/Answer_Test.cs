@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Answer_Test : MonoBehaviour
 {
@@ -27,5 +29,18 @@ public class Answer_Test : MonoBehaviour
         theChoice.ShowChoice(choice);
         yield return new WaitUntil(() => !theChoice.choicelng);
         Debug.Log(theChoice.GetResult());
+        flag = true;
+        
+        if(flag == true)
+        {
+            if(theChoice.result ==0)
+            {
+                SceneManager.LoadScene("Ending");
+            }
+            else if(theChoice.result ==1)
+            {
+
+            }
+        }
     }
 }

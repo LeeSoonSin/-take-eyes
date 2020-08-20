@@ -178,8 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door_Num: 10005
+  DoorName: 
   Door_Code: 3
-  thedata: {fileID: 0}
 --- !u!4 &6443806
 Transform:
   m_ObjectHideFlags: 0
@@ -871,7 +871,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   database: {fileID: 0}
-  inventory: {fileID: 0}
   Item_id: 10012
 --- !u!61 &218603417
 BoxCollider2D:
@@ -7479,7 +7478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1009145326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7519,8 +7518,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door_Num: 10012
+  DoorName: 
   Door_Code: 6
-  thedata: {fileID: 0}
 --- !u!4 &1009145328
 Transform:
   m_ObjectHideFlags: 0
@@ -7718,7 +7717,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   database: {fileID: 0}
-  inventory: {fileID: 0}
   Item_id: 10011
 --- !u!61 &1032219199
 BoxCollider2D:
@@ -7777,7 +7775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1033450980
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7817,8 +7815,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door_Num: 10011
+  DoorName: 
   Door_Code: 5
-  thedata: {fileID: 0}
 --- !u!4 &1033450982
 Transform:
   m_ObjectHideFlags: 0
@@ -7936,7 +7934,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   database: {fileID: 0}
-  inventory: {fileID: 0}
   Item_id: 10012
 --- !u!61 &1175200252
 BoxCollider2D:
@@ -9139,7 +9136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1538698598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9179,8 +9176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door_Num: 10011
+  DoorName: 
   Door_Code: 5
-  thedata: {fileID: 0}
 --- !u!4 &1538698600
 Transform:
   m_ObjectHideFlags: 0
@@ -9275,7 +9272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   database: {fileID: 0}
-  inventory: {fileID: 0}
   Item_id: 10011
 --- !u!61 &1621231121
 BoxCollider2D:
@@ -9531,7 +9527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1787927074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9571,8 +9567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door_Num: 10012
+  DoorName: 
   Door_Code: 6
-  thedata: {fileID: 0}
 --- !u!4 &1787927076
 Transform:
   m_ObjectHideFlags: 0
@@ -9618,7 +9614,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   database: {fileID: 0}
-  inventory: {fileID: 0}
   Item_id: 10005
 --- !u!61 &1788151239
 BoxCollider2D:
