@@ -9728,7 +9728,7 @@ MonoBehaviour:
   switch_name:
   - NumSystem_1
   - 
-  switches: 0000000000000000000000000000000000000000
+  switches: 00000000000000000000000000000000000000000000
   itemList:
   - itemID: 0
     itemName: 

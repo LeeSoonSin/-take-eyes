@@ -11,9 +11,6 @@ public class DataBase : MonoBehaviour
     public bool[] switches; // true false 값을 기억 
 
     public List<Item> itemList = new List<Item>();
-    //public GameObject itemPick;
-    //public GameObject NumberSystem;
-    //public GameObject NumCheck;
     public FlyMob thefly;
     public DoorControl Door;
     public static DataBase instance;
@@ -49,15 +46,10 @@ public class DataBase : MonoBehaviour
         if (objs.Length != 1)
         {
             Destroy(gameObject);
-            //Destroy(this.itemPick);
-            //Destroy(this.NumberSystem);
-            //Destroy(this.NumCheck);
             return;
         }
         DontDestroyOnLoad(gameObject);
-        //DontDestroyOnLoad(this.itemPick);
-        //DontDestroyOnLoad(this.NumberSystem);
-        //DontDestroyOnLoad(this.NumCheck);
+
     }
 #endregion Singleton
     public void UseItem(int _itemID)
@@ -89,9 +81,10 @@ public class DataBase : MonoBehaviour
                 break;
 
             case 10005:
-                Debug.Log("가정실 열쇠 사용");
                 DoorNumb = 10005;
+                Debug.Log(DoorNumb);
                 Door.OpenDoor(DoorNumb);
+                Debug.Log("가정실 열쇠 사용");
                 break;
 
             case 10006:
