@@ -6,7 +6,7 @@ public class DataBase : MonoBehaviour
 {
     public string[] var_name; // 변수 이름
     public float[] var;//float 값을 기억
-
+    public int DoorNumb;
     public string[] switch_name;
     public bool[] switches; // true false 값을 기억 
 
@@ -71,7 +71,7 @@ public class DataBase : MonoBehaviour
 
             case 10001:
                 Debug.Log("열쇠아이템을 사용했습니다.");
-                Door.OpenDoor(10001);
+                Door.OpenDoor(DoorNumb);
             break;
 
             case 10002:
@@ -90,17 +90,18 @@ public class DataBase : MonoBehaviour
 
             case 10005:
                 Debug.Log("가정실 열쇠 사용");
-                Door.OpenDoor(10005);
+                DoorNumb = 10005;
+                Door.OpenDoor(DoorNumb);
                 break;
 
             case 10006:
                 Debug.Log("진로실 열쇠 사용");
-                Door.OpenDoor(10006);
+                Door.OpenDoor(DoorNumb);
                 break;
 
             case 10007:
                 Debug.Log("옥상열쇠 사용");
-                Door.OpenDoor(10007);
+                Door.OpenDoor(DoorNumb);
                 break;
 
             case 10008:
@@ -118,11 +119,11 @@ public class DataBase : MonoBehaviour
 
             case 10011:
                 Debug.Log("과학실 열쇠를 사용");
-                Door.OpenDoor(10011);
+                Door.OpenDoor(DoorNumb);
                 break;
             case 10012:
                 Debug.Log("교무실 열쇠를 사용했습니다.");
-                Door.OpenDoor(10012);
+                Door.OpenDoor(DoorNumb);
                 break;
 
         }

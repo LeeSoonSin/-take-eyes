@@ -6,7 +6,6 @@ public class Item_Use : MonoBehaviour
 {
     public DataBase database;
     public int Item_id;
-    public bool Doors;
     // Start is called before the first frame update
     void Start()
     {

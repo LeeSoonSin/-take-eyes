@@ -141,7 +141,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (talking && keyActivated)
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetButtonDown("Jump"))
             {
                 keyActivated = false;
                 count++;

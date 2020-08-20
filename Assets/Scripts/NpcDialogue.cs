@@ -18,7 +18,7 @@ public class NpcDialogue : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(Input.GetKey(KeyCode.Z) && thedata.switches[DataNum] == false)
+        if(Input.GetKey(KeyCode.Space) && thedata.switches[DataNum] == false)
         {
             theDM.ShowDialogue(dialogue_1);
             thedata.switches[DataNum] = true;

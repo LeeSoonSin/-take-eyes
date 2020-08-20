@@ -2648,7 +2648,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Door_Num: 10006
   Door_Code: 2
-  Door_Lock: 0
   thedata: {fileID: 0}
 --- !u!61 &708690746
 BoxCollider2D:
@@ -12144,7 +12143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293263434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.05, y: -3.13, z: 0}
+  m_LocalPosition: {x: 32.05, y: -3.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12461,6 +12460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   var_name: []
   var: []
+  DoorNumb: 0
   switch_name:
   - NumSystem_1
   - 
@@ -13703,7 +13703,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 0}
   Item_id: 10008
-  Doors: 0
 --- !u!61 &1579514450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15144,7 +15143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Door_Num: 10007
   Door_Code: 4
-  Door_Lock: 0
   thedata: {fileID: 0}
 --- !u!61 &2003814090
 BoxCollider2D:
@@ -15218,7 +15216,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 0}
   Item_id: 10007
-  Doors: 0
 --- !u!61 &2040979141
 BoxCollider2D:
   m_ObjectHideFlags: 0

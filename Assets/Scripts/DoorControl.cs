@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class DoorControl : MonoBehaviour
 {
-    public float Door_Num;
+    public int Door_Num;
     public int Door_Code;
-    public bool Door_Lock;
     public DataBase thedata;
     // Start is called before the first frame update
     void Awake()
@@ -31,16 +30,17 @@ public class DoorControl : MonoBehaviour
     //}
     public void OpenDoor(int A)
     {
+        Debug.Log("이 열쇠의 번호는" + A);
+        Debug.Log("이 문의 번호는 " + Door_Num);
         if( A == Door_Num)
         {
             Debug.Log("문이 열립니다.");
             gameObject.SetActive(false);
             thedata.switches[Door_Code] = true;
         }
+        else
+        {
+            Debug.Log("버그 입니다."); 
+        }
     }
-
-    //void Update()
-    //{
-    //    OpenDoor();
-    //}
 }
