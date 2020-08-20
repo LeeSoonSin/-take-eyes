@@ -13,7 +13,7 @@ public class Title : MonoBehaviour
     }
     public void GameStart()
     {
-         SceneManager.LoadScene("Classroom_2");
+        SceneManager.LoadScene("Start");
 
 
 

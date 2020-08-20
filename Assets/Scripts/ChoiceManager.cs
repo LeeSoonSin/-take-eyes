@@ -39,7 +39,7 @@ public class ChoiceManager : MonoBehaviour
     private bool keyInput; //키차리 활성화, 비활성화
 
     private int count; //배열의 크기
-    private int result; //선택한 선택지
+    public int result; //선택한 선택지      public으로 바뀜
 
     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
 
